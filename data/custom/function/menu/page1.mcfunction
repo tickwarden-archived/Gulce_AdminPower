@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"═══[ AdminPower v1.0.0-pre1 — Sayfa 1/13 ]═══","color":"gold","bold":true}]
+tellraw @s ["",{"text":"═══[ AdminPower v1.2.0 — Sayfa 1/16 ]═══","color":"gold","bold":true}]
 tellraw @s ["",{"text":"🔧 Utility","color":"gray"},{"text":" ─────────────────","color":"dark_gray"}]
 tellraw @s ["",{"text":"❤ İyileştir","color":"red","clickEvent":{"action":"run_command","value":"/function custom:util_heal_self"},"hoverEvent":{"action":"show_text","value":"10sn CD • Can yenile"}},{"text":"  "},{"text":"🍖 Doyur","color":"green","clickEvent":{"action":"run_command","value":"/function custom:util_feed_self"},"hoverEvent":{"action":"show_text","value":"10sn CD • Açlığı gider"}}]
 tellraw @s ["",{"text":"💨 Hız","color":"aqua","clickEvent":{"action":"run_command","value":"/function custom:speed_boost"},"hoverEvent":{"action":"show_text","value":"30sn CD • Speed II"}}]

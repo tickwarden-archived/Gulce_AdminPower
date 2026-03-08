@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"═══[ AdminPower v1.0.0-pre1 — Sayfa 7/13 ]═══","color":"gold","bold":true}]
+tellraw @s ["",{"text":"═══[ AdminPower v1.2.0 — Sayfa 7/16 ]═══","color":"gold","bold":true}]
 tellraw @s ["",{"text":"📜 LuckPerms Menüsü","color":"gray"},{"text":" ──────────────","color":"dark_gray"}]
 tellraw @s ["",{"text":"[LP Ana Menü]","color":"green","clickEvent":{"action":"run_command","value":"/function custom:lp/menu"},"hoverEvent":{"action":"show_text","value":"LuckPerms komutları"}},{"text":"  "},{"text":"[LP S.1]","color":"green","clickEvent":{"action":"run_command","value":"/function custom:lp/page1"}},{"text":"  "},{"text":"[LP S.2]","color":"green","clickEvent":{"action":"run_command","value":"/function custom:lp/page2"}}]
 tellraw @s ["",{"text":"[LP S.3]","color":"green","clickEvent":{"action":"run_command","value":"/function custom:lp/page3"}},{"text":"  "},{"text":"[LP S.4]","color":"green","clickEvent":{"action":"run_command","value":"/function custom:lp/page4"}},{"text":"  "},{"text":"[LP S.5]","color":"green","clickEvent":{"action":"run_command","value":"/function custom:lp/page5"}}]

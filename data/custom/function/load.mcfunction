@@ -1,5 +1,5 @@
 # ╔═══════════════════════════════════════════════╗
-# ║  AdminPower v1.0.0-pre1 — LOAD               ║
+# ║  AdminPower v1.2.0 — LOAD               ║
 # ║  Countdown CD Sistemi                        ║
 # ╚═══════════════════════════════════════════════╝
 
@@ -55,3 +55,23 @@ execute if score $ame ap_flags matches 1 run function custom:ame/on_load
 
 # ── Versiyon Kontrolü ───────────────────────────
 function custom:version_check
+
+# ── Yeni CD Hedefleri (v1.1.0) ───────────────────
+scoreboard objectives add ap_cd_ha dummy
+scoreboard objectives add ap_cd_fa dummy
+scoreboard objectives add ap_cd_na dummy
+scoreboard objectives add ap_cd_ts dummy
+
+# ── Yeni CD Hedefleri (v1.2.0) ───────────────────
+scoreboard objectives add ap_cd_bl dummy
+scoreboard objectives add ap_cd_ca dummy
+scoreboard objectives add ap_cd_sa dummy
+scoreboard objectives add ap_cd_fk dummy
+scoreboard objectives add ap_cd_sv dummy
+scoreboard objectives add ap_cd_wt dummy
+scoreboard objectives add ap_cd_garm dummy
+scoreboard objectives add ap_cd_gto dummy
+scoreboard objectives add ap_cd_gda dummy
+# Durum bayrakları
+# $time_frozen ve $mob_spawn sadece ilk kurulumda (version_first_install) init edilir
+# load'da sıfırlanmaz — toggle durumu reload'dan sonra korunur

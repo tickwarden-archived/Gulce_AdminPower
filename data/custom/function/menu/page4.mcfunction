@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"═══[ AdminPower v1.0.0-pre1 — Sayfa 4/13 ]═══","color":"gold","bold":true}]
+tellraw @s ["",{"text":"═══[ AdminPower v1.2.0 — Sayfa 4/16 ]═══","color":"gold","bold":true}]
 tellraw @s ["",{"text":"💥 Saldırı / Troll","color":"gray"},{"text":" ─────────────","color":"dark_gray"}]
 tellraw @s ["",{"text":"🔥 Ateş Topu","color":"red","clickEvent":{"action":"run_command","value":"/function custom:fireball"},"hoverEvent":{"action":"show_text","value":"5sn CD • Fireball çağır"}},{"text":"  "},{"text":"💣 Patlama","color":"dark_red","clickEvent":{"action":"run_command","value":"/function custom:explosion"},"hoverEvent":{"action":"show_text","value":"30sn CD • TNT patlat"}}]
 tellraw @s ["",{"text":"❄ Dondur (Hepsi)","color":"aqua","clickEvent":{"action":"run_command","value":"/function custom:freeze_all"},"hoverEvent":{"action":"show_text","value":"60sn CD • Tüm oyuncuları dondur"}},{"text":"  "},{"text":"🌊 Çöz (Hepsi)","color":"blue","clickEvent":{"action":"run_command","value":"/function custom:unfreeze_all"},"hoverEvent":{"action":"show_text","value":"CD yok"}}]

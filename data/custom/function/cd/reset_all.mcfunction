@@ -22,3 +22,17 @@ scoreboard players set @s ap_cd_bc 0
 scoreboard players set @s ap_cd_rp 0
 playsound minecraft:ui.button.click master @s ~ ~ ~ 1 1
 tellraw @s {"text":"[AdminPower] ✅ Tüm cooldown'lar sıfırlandı!","color":"green"}
+# ── v1.1.0 + v1.2.0 CD'leri ─────────────────────
+scoreboard players set @s ap_cd_ha 0
+scoreboard players set @s ap_cd_fa 0
+scoreboard players set @s ap_cd_na 0
+scoreboard players set @s ap_cd_ts 0
+scoreboard players set @s ap_cd_bl 0
+scoreboard players set @s ap_cd_ca 0
+scoreboard players set @s ap_cd_sa 0
+scoreboard players set @s ap_cd_fk 0
+scoreboard players set @s ap_cd_sv 0
+scoreboard players set @s ap_cd_wt 0
+scoreboard players set @s ap_cd_garm 0
+scoreboard players set @s ap_cd_gto 0
+scoreboard players set @s ap_cd_gda 0

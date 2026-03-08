@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"═══[ AdminPower v1.0.0-pre1 — Sayfa 3/13 ]═══","color":"gold","bold":true}]
+tellraw @s ["",{"text":"═══[ AdminPower v1.2.0 — Sayfa 3/16 ]═══","color":"gold","bold":true}]
 tellraw @s ["",{"text":"🎁 Eşya / Güç","color":"gray"},{"text":" ─────────────────","color":"dark_gray"}]
 tellraw @s ["",{"text":"💎 64 Elmas","color":"aqua","clickEvent":{"action":"run_command","value":"/function custom:diamond"},"hoverEvent":{"action":"show_text","value":"2dk CD • 64 elmas"}},{"text":"  "},{"text":"🦋 Elytra","color":"light_purple","clickEvent":{"action":"run_command","value":"/function custom:give_elitra"},"hoverEvent":{"action":"show_text","value":"5dk CD • Elytra ver"}}]
 tellraw @s ["",{"text":"⭐ 1000 XP","color":"yellow","clickEvent":{"action":"run_command","value":"/function custom:give_xp"},"hoverEvent":{"action":"show_text","value":"60sn CD • XP ver"}},{"text":"  "},{"text":"🎒 Başlangıç Paketi","color":"green","clickEvent":{"action":"run_command","value":"/function custom:starter_pack"},"hoverEvent":{"action":"show_text","value":"10dk CD • Starter pack"}}]

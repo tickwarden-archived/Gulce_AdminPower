@@ -1,5 +1,5 @@
 # ╔═══════════════════════════════════════════════╗
-# ║  AdminPower v1.0.0-pre1 — TICK               ║
+# ║  AdminPower v1.2.0 — TICK               ║
 # ║  Countdown CD: her tick 1 azaltır            ║
 # ╚═══════════════════════════════════════════════╝
 
@@ -79,3 +79,20 @@ scoreboard players set @a[scores={ap_main_menu=1..}] ap_main_menu 0
 
 execute as @a[scores={ap_multiCmd=1..}] at @s run function custom:macros/run_cmd with entity @s SelectedItem.components."minecraft:custom_data"
 scoreboard players set @a[scores={ap_multiCmd=1..}] ap_multiCmd 0
+
+# ── Yeni CD sayaçları (v1.1.0) ───────────────────
+scoreboard players remove @a[scores={ap_cd_ha=1..}] ap_cd_ha 1
+scoreboard players remove @a[scores={ap_cd_fa=1..}] ap_cd_fa 1
+scoreboard players remove @a[scores={ap_cd_na=1..}] ap_cd_na 1
+scoreboard players remove @a[scores={ap_cd_ts=1..}] ap_cd_ts 1
+
+# ── Yeni CD sayaçları (v1.2.0) ───────────────────
+scoreboard players remove @a[scores={ap_cd_bl=1..}] ap_cd_bl 1
+scoreboard players remove @a[scores={ap_cd_ca=1..}] ap_cd_ca 1
+scoreboard players remove @a[scores={ap_cd_sa=1..}] ap_cd_sa 1
+scoreboard players remove @a[scores={ap_cd_fk=1..}] ap_cd_fk 1
+scoreboard players remove @a[scores={ap_cd_sv=1..}] ap_cd_sv 1
+scoreboard players remove @a[scores={ap_cd_wt=1..}] ap_cd_wt 1
+scoreboard players remove @a[scores={ap_cd_garm=1..}] ap_cd_garm 1
+scoreboard players remove @a[scores={ap_cd_gto=1..}] ap_cd_gto 1
+scoreboard players remove @a[scores={ap_cd_gda=1..}] ap_cd_gda 1

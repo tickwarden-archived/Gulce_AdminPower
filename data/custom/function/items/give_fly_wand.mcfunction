@@ -1,0 +1,2 @@
+give @s carrot_on_a_stick[minecraft:custom_data={ap_item:"fly_wand"},minecraft:item_name='{"text":"Uçuş Değneği","color":"light_purple","bold":true,"italic":false}',minecraft:lore=['{"text":"Sağ tık → Uçuşu Aç/Kapat","color":"gray","italic":false}'],minecraft:custom_model_data={floats:[1008.0f]}]
+tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"✈ Uçuş Değneği verildi!","color":"light_purple"}]

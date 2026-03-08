@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"═══[ AdminPower v1.0.0-pre1 — Sayfa 5/13 ]═══","color":"gold","bold":true}]
+tellraw @s ["",{"text":"═══[ AdminPower v1.2.0 — Sayfa 5/16 ]═══","color":"gold","bold":true}]
 tellraw @s ["",{"text":"📦 Yönetim","color":"gray"},{"text":" ─────────────────","color":"dark_gray"}]
 tellraw @s ["",{"text":"🗑 Envanter Temizle","color":"red","clickEvent":{"action":"run_command","value":"/function custom:clear_inventory"},"hoverEvent":{"action":"show_text","value":"CD yok • Kendi envanterini temizle"}}]
 tellraw @s ["",{"text":"🌍 Spawn'a Işınla","color":"green","clickEvent":{"action":"run_command","value":"/function custom:util_tp_spawn"},"hoverEvent":{"action":"show_text","value":"CD yok • 0 100 0"}},{"text":"  "},{"text":"🏹 128 Ok Ver","color":"dark_green","clickEvent":{"action":"run_command","value":"/function custom:util_give_arrows"},"hoverEvent":{"action":"show_text","value":"CD yok"}}]

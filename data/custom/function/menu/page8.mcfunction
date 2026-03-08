@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"═══[ AdminPower v1.0.0-pre1 — Sayfa 8/13 ]═══","color":"gold","bold":true}]
+tellraw @s ["",{"text":"═══[ AdminPower v1.2.0 — Sayfa 8/16 ]═══","color":"gold","bold":true}]
 tellraw @s ["",{"text":"🔌 AME (Advanced Macro Engine)","color":"gray"}]
 tellraw @s ["",{"text":"[AME Durumu]","color":"aqua","clickEvent":{"action":"run_command","value":"/function custom:ame/status"},"hoverEvent":{"action":"show_text","value":"AME yüklü mü kontrol et"}},{"text":"  "},{"text":"[AME Config]","color":"green","clickEvent":{"action":"run_command","value":"/function custom:ame/config"},"hoverEvent":{"action":"show_text","value":"CD sürelerini göster (AME gerekli)"}}]
 tellraw @s ["",{"text":"[Kendi CD Sıfırla]","color":"yellow","clickEvent":{"action":"run_command","value":"/function custom:cd/reset_all"},"hoverEvent":{"action":"show_text","value":"Tüm kendi CD'lerini sıfırla"}},{"text":"  "},{"text":"[Hedef CD Sıfırla]","color":"gold","clickEvent":{"action":"run_command","value":"/function custom:cd/reset_target"},"hoverEvent":{"action":"show_text","value":"Yakın oyuncunun CD'lerini sıfırla"}}]

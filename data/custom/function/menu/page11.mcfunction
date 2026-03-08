@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"═══[ AdminPower v1.0.0-pre1 — Sayfa 11/13 ]═══","color":"gold","bold":true}]
+tellraw @s ["",{"text":"═══[ AdminPower v1.2.0 — Sayfa 11/16 ]═══","color":"gold","bold":true}]
 tellraw @s ["",{"text":"💰 Token Ekonomisi","color":"gray"},{"text":" ─────────────────","color":"dark_gray"}]
 tellraw @s ["",{"text":"💰 Bakiye","color":"gold","clickEvent":{"action":"run_command","value":"/function custom:token_balance"},"hoverEvent":{"action":"show_text","value":"Token bakiyeni göster"}},{"text":"  "},{"text":"➕ Token Kazan","color":"green","clickEvent":{"action":"run_command","value":"/function custom:token_earn"},"hoverEvent":{"action":"show_text","value":"60sn CD • +10 token kazan"}}]
 tellraw @s ["",{"text":"❤ -5T: Tam Can","color":"red","clickEvent":{"action":"run_command","value":"/function custom:token_spend_heal"},"hoverEvent":{"action":"show_text","value":"5 token harca → tam can"}},{"text":"  "},{"text":"💨 -10T: Hız","color":"aqua","clickEvent":{"action":"run_command","value":"/function custom:token_spend_speed"},"hoverEvent":{"action":"show_text","value":"10 token harca → Speed II (30sn)"}}]

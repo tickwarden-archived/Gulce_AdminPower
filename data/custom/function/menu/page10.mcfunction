@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"═══[ AdminPower v1.0.0-pre1 — Sayfa 10/13 ]═══","color":"gold","bold":true}]
+tellraw @s ["",{"text":"═══[ AdminPower v1.2.0 — Sayfa 10/16 ]═══","color":"gold","bold":true}]
 tellraw @s ["",{"text":"🌍 Dünya Yönetimi","color":"gray"},{"text":" ─────────────────","color":"dark_gray"}]
 tellraw @s ["",{"text":"🌐 WB 100","color":"red","clickEvent":{"action":"run_command","value":"/function custom:wb_small"},"hoverEvent":{"action":"show_text","value":"Worldborder → 100 blok"}},{"text":"  "},{"text":"🌐 WB 1000","color":"yellow","clickEvent":{"action":"run_command","value":"/function custom:wb_medium"},"hoverEvent":{"action":"show_text","value":"Worldborder → 1000 blok"}},{"text":"  "},{"text":"🌐 WB 10000","color":"green","clickEvent":{"action":"run_command","value":"/function custom:wb_large"},"hoverEvent":{"action":"show_text","value":"Worldborder → 10000 blok"}}]
 tellraw @s ["",{"text":"🌐 WB Sıfırla","color":"aqua","clickEvent":{"action":"run_command","value":"/function custom:wb_reset"},"hoverEvent":{"action":"show_text","value":"Worldborder max'a sıfırla"}}]
