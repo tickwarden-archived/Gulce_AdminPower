@@ -1,6 +1,5 @@
-# ⚔️Gulce_AdminPower
-
-Minecraft Java Edition 1.21.4 için admin yönetim datapack'i.
+# ⚔️ Gulce_AdminPower
+Minecraft Java Edition için admin yönetim datapack'i.
 
 ## ✨ Özellikler
 - 👑 Owner, Admin, Mod, VIP izin sistemi
@@ -9,10 +8,17 @@ Minecraft Java Edition 1.21.4 için admin yönetim datapack'i.
 - 🎯 Trigger tabanlı menü arayüzü
 - 📜 Token sistemi
 
+## 📦 Bağımlılıklar
+Bu datapack çalışmak için **macroEngine-dp**'ye ihtiyaç duyar.
+- 🔗 [macroEngine-dp](https://github.com/tickwarden/macroEngine-dp)
+
+> ⚠️ macroEngine-dp kurulu olmadan AdminPower düzgün çalışmaz!
+
 ## 🚀 Kurulum
-1. `.zip` dosyasını çıkartmadan `dünya/datapacks/` klasörüne koy
-2. Oyunda `/reload` çalıştır
-3. `/function custom:menu` ile başla
+1. Önce [macroEngine-dp](https://github.com/tickwarden/macroEngine-dp)'yi indir ve kur
+2. `Gulce_AdminPower.zip` dosyasını çıkartmadan `dünya/datapacks/` klasörüne koy
+3. Oyunda `/reload` çalıştır
+4. `/function custom:menu` ile başla
 
 ## 📋 Gereksinimler
 - Minecraft Java Edition 1.20.3 – 1.21.4
