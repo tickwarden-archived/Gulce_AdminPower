@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 71,
+    "description": "AdminPower v1.0.0-pre1 | Cooldown + AME\n1.21.4 Uyumlu | /function custom:menu 👑",
+    "supported_formats": {
+      "min_inclusive": 61,
+      "max_inclusive": 71
+    }
+  }
+}

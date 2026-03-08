@@ -1,0 +1,1 @@
+function custom:exec/kill_all_mobs_world

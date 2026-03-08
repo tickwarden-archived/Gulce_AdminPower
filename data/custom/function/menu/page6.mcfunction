@@ -1,0 +1,6 @@
+tellraw @s ["",{"text":"═══[ AdminPower v1.0.0-pre1 — Sayfa 6/13 ]═══","color":"gold","bold":true}]
+tellraw @s ["",{"text":"⚡ Trigger Menüsü (op tag gerekli)","color":"gray"},{"text":" ───","color":"dark_gray"}]
+tellraw @s ["",{"text":"[Trigger Ana Menüyü Aç]","color":"green","clickEvent":{"action":"run_command","value":"/function custom:triggers/main_menu"},"hoverEvent":{"action":"show_text","value":"Trigger tabanlı admin menüsü"}}]
+tellraw @s ["",{"text":"💡 Tag eklemek için:","color":"gray"}]
+tellraw @s ["",{"text":"/tag @s add op","color":"yellow","clickEvent":{"action":"suggest_command","value":"/tag @s add op"}}]
+tellraw @s ["",{"text":"◀ Önceki","color":"yellow","clickEvent":{"action":"run_command","value":"/function custom:menu/page5"}},{"text":"  "},{"text":"Sonraki ▶","color":"yellow","clickEvent":{"action":"run_command","value":"/function custom:menu/page7"}}]
