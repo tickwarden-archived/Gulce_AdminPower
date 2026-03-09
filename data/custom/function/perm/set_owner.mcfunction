@@ -20,3 +20,4 @@ execute as @a[tag=ap.cur_target,limit=1] run function custom:perm/apply with sto
 
 tellraw @a [{"text":"[AdminPower] ","color":"gold"},{"text":"👑 "},{"selector":"@a[tag=ap.cur_target,limit=1]","color":"gold"},{"text":" Sahip yetkisi aldı!","color":"gold"}]
 tag @a remove ap.cur_target
+execute if score $ame ap_flags matches 1 run function custom:ame/perm/sync

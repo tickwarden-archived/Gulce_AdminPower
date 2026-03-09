@@ -1,2 +1,3 @@
-execute if score @s ap_cd_iv matches 1.. run function custom:cd/busy_iv
-execute if score @s ap_cd_iv matches ..0 run function custom:exec/invincible
+# AME yolu (epoch-bazlı, reload-safe)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_iv
+execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_iv

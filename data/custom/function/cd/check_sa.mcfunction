@@ -1,2 +1,3 @@
-execute if score @s ap_cd_sa matches 1.. run function custom:cd/busy_sa
-execute if score @s ap_cd_sa matches ..0 run function custom:exec/smite_all
+# AME yolu (epoch-bazlı, reload-safe)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_sa
+execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_sa

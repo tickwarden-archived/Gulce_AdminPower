@@ -1,2 +1,3 @@
-execute if score @s ap_cd_te matches 1.. run function custom:cd/busy_te
-execute if score @s ap_cd_te matches ..0 run function custom:exec/token_earn
+# AME yolu (epoch-bazlı, reload-safe)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_te
+execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_te

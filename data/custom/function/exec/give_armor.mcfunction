@@ -1,4 +1,6 @@
-scoreboard players set @s ap_cd_garm 6000
+# CD — AME (epoch-bazlı) veya scoreboard (vanilla)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/set
+execute if score $ame ap_flags matches 0 run scoreboard players set @s ap_cd_garm 6000
 give @s minecraft:netherite_helmet[minecraft:custom_name='{"text":"Admin Kaskı","color":"gold","bold":true}',minecraft:enchantments={"levels":{"minecraft:protection":4,"minecraft:unbreaking":3,"minecraft:mending":1}}]
 give @s minecraft:netherite_chestplate[minecraft:custom_name='{"text":"Admin Zırhı","color":"gold","bold":true}',minecraft:enchantments={"levels":{"minecraft:protection":4,"minecraft:unbreaking":3,"minecraft:mending":1}}]
 give @s minecraft:netherite_leggings[minecraft:custom_name='{"text":"Admin Taytı","color":"gold","bold":true}',minecraft:enchantments={"levels":{"minecraft:protection":4,"minecraft:unbreaking":3,"minecraft:mending":1}}]

@@ -1,2 +1,3 @@
-execute if score @s ap_cd_tp matches 1.. run function custom:cd/busy_tp
-execute if score @s ap_cd_tp matches ..0 run function custom:exec/tp_to_nearest
+# AME yolu (epoch-bazlı, reload-safe)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_tp
+execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_tp

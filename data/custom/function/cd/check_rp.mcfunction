@@ -1,2 +1,3 @@
-execute if score @s ap_cd_rp matches 1.. run function custom:cd/busy_rp
-execute if score @s ap_cd_rp matches ..0 run function custom:exec/repair_hand
+# AME yolu (epoch-bazlı, reload-safe)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_rp
+execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_rp

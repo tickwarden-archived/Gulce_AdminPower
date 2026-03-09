@@ -1,2 +1,3 @@
-execute if score @s ap_cd_el matches 1.. run function custom:cd/busy_el
-execute if score @s ap_cd_el matches ..0 run function custom:exec/elytra
+# AME yolu (epoch-bazlı, reload-safe)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_el
+execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_el

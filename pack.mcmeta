@@ -1,10 +1,10 @@
 {
   "pack": {
-    "pack_format": 61,
-    "description": "AdminPower v1.2.0 | Bug Fixes + Toplu İşlemler\n1.21.4 Uyumlu | /function custom:menu 👑",
+    "pack_format": 71,
+    "description": "AdminPower v1.3.3-AME | Toggle Fix + Uninstall\n1.21.4 Uyumlu | /function custom:menu 👑",
     "supported_formats": {
-      "min_inclusive": 48,
-      "max_inclusive": 61
+      "min_inclusive": 61,
+      "max_inclusive": 71
     }
   }
 }

@@ -1,2 +1,3 @@
-execute if score @s ap_cd_ha matches 1.. run function custom:cd/busy_ha
-execute if score @s ap_cd_ha matches ..0 run function custom:exec/heal_all
+# AME yolu (epoch-bazlı, reload-safe)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_ha
+execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_ha

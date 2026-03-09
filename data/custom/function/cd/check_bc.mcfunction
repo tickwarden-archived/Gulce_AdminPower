@@ -1,2 +1,3 @@
-execute if score @s ap_cd_bc matches 1.. run function custom:cd/busy_bc
-execute if score @s ap_cd_bc matches ..0 run function custom:exec/broadcast
+# AME yolu (epoch-bazlı, reload-safe)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_bc
+execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_bc

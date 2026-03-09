@@ -1,5 +1,7 @@
 # CD başlat
-scoreboard players set @s ap_cd_fb 100
+# CD — AME (epoch-bazlı) veya scoreboard (vanilla)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/set
+execute if score $ame ap_flags matches 0 run scoreboard players set @s ap_cd_fb 100
 execute if score $ame ap_flags matches 1 run function custom:ame/fire_event_fb
 
 # Oyuncu konumunu storage'a yaz

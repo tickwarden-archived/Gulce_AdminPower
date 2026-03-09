@@ -1,5 +1,7 @@
 # CD başlat
-scoreboard players set @s ap_cd_lt 100
+# CD — AME (epoch-bazlı) veya scoreboard (vanilla)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/set
+execute if score $ame ap_flags matches 0 run scoreboard players set @s ap_cd_lt 100
 
 # BUG DÜZELTİLDİ: int 1 ile tam sayı koordinat alınıyordu,
 # yıldırım blok merkezine düşüyordu. Düzeltme: double 0.001 ile gerçek konumu kullan.
@@ -12,3 +14,4 @@ execute store result storage custom:tmp z double 0.001 run data get entity @s Po
 function custom:macros/world/summon_at with storage custom:tmp
 playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 1 1
 tellraw @s {"text":"[AdminPower] ⚡ Yıldırım çağrıldı!","color":"yellow"}
+execute if score $ame ap_flags matches 1 run function custom:ame/fire_event_lightning

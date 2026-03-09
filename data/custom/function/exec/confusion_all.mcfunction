@@ -1,4 +1,6 @@
-scoreboard players set @s ap_cd_ca 600
+# CD — AME (epoch-bazlı) veya scoreboard (vanilla)
+execute if score $ame ap_flags matches 1 run function custom:ame/cd/set
+execute if score $ame ap_flags matches 0 run scoreboard players set @s ap_cd_ca 600
 effect give @a[tag=!ap.admin,tag=!ap.owner] minecraft:nausea 8 2 true
 title @a[tag=!ap.admin,tag=!ap.owner] times 5 50 10
 title @a[tag=!ap.admin,tag=!ap.owner] title {"text":"🌀","color":"dark_purple","bold":true}
