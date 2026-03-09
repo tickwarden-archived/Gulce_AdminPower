@@ -3,10 +3,6 @@
 # ║  Countdown CD Sistemi                         ║
 # ╚═══════════════════════════════════════════════╝
 
-
-execute if data storage custom:meta {enabled:1b} run return 0
-
-
 # ── Objectives: sadece ilk kurulumda ekle ───────
 # storage custom:meta {ap_objectives_done:1b} varsa atla.
 # Böylece her /reload'da 74× "already exists" hatası olmaz.
@@ -120,8 +116,6 @@ data modify storage custom:meta ap_objectives_done set value 1b
 
 # Reload'dan sonraki her çalışmada buraya atlanır
 function custom:load/post_objectives
-
-data modify storage custom:meta enabled set value 1b
 
 # Durum bayrakları
 # #time_frozen ve #mob_spawn (state fake players) sadece ilk kurulumda (version_first_install) init edilir
