@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — AME [8/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "🔌 AME Durumu",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:ame/status"
+      }
+    },
+    {
+      "label": "⚙ AME Config",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:ame/config"
+      }
+    },
+    {
+      "label": "⏳ Kendi CD Sıfırla",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:cd/reset_all"
+      }
+    },
+    {
+      "label": "⏩ Hedef CD Sıfırla",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:cd/reset_target"
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page7"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page9"
+      }
+    }
+  ]
+}

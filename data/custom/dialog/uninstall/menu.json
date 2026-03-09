@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "⚠ AdminPower Kaldırma",
+    "color": "red",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "✅ ONAYLA — Tüm Verileri Sil",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:uninstall/confirm"
+      }
+    },
+    {
+      "label": "❌ İptal — Geri Dön",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:ame/menu"
+      }
+    }
+  ]
+}

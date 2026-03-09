@@ -1,2 +1,2 @@
-give @s carrot_on_a_stick[minecraft:custom_data={ap_item:"lightning_wand"},minecraft:item_name='{"text":"Yıldırım Değneği","color":"yellow","bold":true,"italic":false}',minecraft:lore=['{"text":"Sağ tık → En Yakın Moba Yıldırım (CD: 5sn)","color":"gray","italic":false}'],minecraft:custom_model_data={floats:[1006.0f]}]
+give @s carrot_on_a_stick[minecraft:custom_data={ap_item:"lightning_wand"},minecraft:item_name={text:"Yıldırım Değneği",color:"yellow",bold:true,italic:false},minecraft:lore=[{text:"Sağ tık → En Yakın Moba Yıldırım (CD: 5sn)",color:"gray",italic:false}],minecraft:custom_model_data={floats:[1006.0f]}]
 tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"⚡ Yıldırım Değneği verildi!","color":"yellow"}]

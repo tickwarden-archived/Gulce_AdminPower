@@ -10,5 +10,5 @@ execute if entity @s[tag=ap.flying] run return run tag @s remove ap.flying
 # ── Kapalı → aç (yukarıda return çalıştıysa buraya ulaşılmaz) ──
 effect give @s minecraft:levitation 99999 0 true
 tag @s add ap.flying
-tellraw @s [{"text":"[AdminPower] ✈ Uçuş aktif (levitation)! ","color":"aqua"},{"text":"Gerçek uçuş için: ","color":"gray"},{"text":"/gamemode creative","color":"yellow","clickEvent":{"action":"suggest_command","value":"/gamemode creative"}}]
+tellraw @s [{"text":"[AdminPower] ✈ Uçuş aktif (levitation)! ","color":"aqua"},{"text":"Gerçek uçuş için: ","color":"gray"},{"text":"/gamemode creative","color":"yellow",click_event:{"action":"suggest_command","command":"/gamemode creative"}}]
 playsound minecraft:entity.parrot.fly master @s ~ ~ ~ 1 1

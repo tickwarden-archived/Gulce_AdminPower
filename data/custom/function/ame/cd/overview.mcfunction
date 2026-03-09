@@ -37,4 +37,4 @@ function custom:ame/cd/overview/show_entry with storage macro:input {}
 data modify storage macro:input key set value "ap_cd_mc"
 function custom:ame/cd/overview/show_entry with storage macro:input {}
 
-tellraw @s [{"text":"─────────────────────────────","color":"dark_gray"},{"text":"  ⏩ Sıfırla","color":"dark_green","italic":true,"clickEvent":{"action":"run_command","value":"/function custom:cd/reset_all"}}]
+tellraw @s [{"text":"─────────────────────────────","color":"dark_gray"},{"text":"  ⏩ Sıfırla","color":"dark_green","italic":true,click_event:{"action":"run_command","command":"/function custom:cd/reset_all"}}]

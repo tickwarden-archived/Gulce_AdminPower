@@ -14,5 +14,5 @@ execute as @a[tag=ap.cur_target,limit=1] run title @s title {"text":"ADMİN","co
 execute as @a[tag=ap.cur_target,limit=1] run title @s subtitle {"text":"Tam yetki paketi verildi","color":"yellow"}
 execute as @a[tag=ap.cur_target,limit=1] run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1
 tellraw @a [{"text":"[AdminPower] ","color":"gold"},{"text":"👑 En yakın oyuncuya admin paketi verildi (op tag + creative + araçlar)","color":"yellow"}]
-tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"Gerçek sunucu OP için konsoldan: ","color":"gray"},{"text":"/op <isim>","color":"yellow","clickEvent":{"action":"suggest_command","value":"/op "}}]
+tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"Gerçek sunucu OP için konsoldan: ","color":"gray"},{"text":"/op <isim>","color":"yellow",click_event:{"action":"suggest_command","command":"/op "}}]
 tag @a remove ap.cur_target

@@ -1,0 +1,127 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Yetki Sistemi [13/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "👑 Sahip Yap  (Seviye 4)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:perm/set_owner"
+      }
+    },
+    {
+      "label": "⚙ Admin Yap  (Seviye 3)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:perm/set_admin"
+      }
+    },
+    {
+      "label": "🛡 Mod Yap  (Seviye 2)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:perm/set_mod"
+      }
+    },
+    {
+      "label": "⭐ VIP Yap  (Seviye 1)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:perm/set_vip"
+      }
+    },
+    {
+      "label": "🚫 Yetkiyi Kaldır",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:perm/revoke"
+      }
+    },
+    {
+      "label": "🔍 Kendi Yetkini Gör",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:perm/check_self"
+      }
+    },
+    {
+      "label": "📋 Yakın Oyuncu Yetkisi",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:perm/check"
+      }
+    },
+    {
+      "label": "🔧 Eldekini Tamir Et  (20sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:cd/check_rp"
+      }
+    },
+    {
+      "label": "📢 Duyuru Gönder  (10sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:cd/check_bc"
+      }
+    },
+    {
+      "label": "⚠ Çoklu Komut →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "⚠ Çoklu Komut",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "cmds",
+              "label": "📋 commands: [] formatı",
+              "max_length": 512,
+              "initial": "[]"
+            }
+          ],
+          "actions": [
+            {
+              "label": "🚀 Çalıştır",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/function custom:macros/run_cmd {commands:'$(cmds)'}"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page13"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page12"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page14"
+      }
+    }
+  ]
+}

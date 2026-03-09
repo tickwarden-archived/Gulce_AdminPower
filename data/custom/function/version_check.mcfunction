@@ -20,19 +20,16 @@ execute if score $ver_ok ap_flags matches 0 run function custom:version_warn
 
 # Sürümü storage'a yaz (bu noktadan sonra artık 1.0.0 kayıtlı)
 data modify storage custom:meta ap_version set value "1.2.0"
-data modify storage custom:meta pack_format set value 71
-data modify storage custom:meta mc_compat set value "1.21.1 – 1.21.4"
+data modify storage custom:meta pack_format set value 94
+data modify storage custom:meta mc_compat set value "1.21.11"
 
 # ── 2. MC sürüm aralığı skoru ────────────────────────────────
-# pack_format 61 = 1.21.1,  71 = 1.21.4
+# pack_format 71 = 1.21.5
 # Beklenen aralığı sabit olarak sakla (bilgi amaçlı)
-scoreboard players set $pf_min ap_flags 61
-scoreboard players set $pf_max ap_flags 71
-scoreboard players set $pf_cur ap_flags 71
+scoreboard players set $pf_min ap_flags 71
+scoreboard players set $pf_max ap_flags 94
+scoreboard players set $pf_cur ap_flags 94
 
 # Mevcut pack_format beklenen aralıkta mı? (sabit karşılaştırma)
-execute if score $pf_cur ap_flags >= $pf_min ap_flags \
-  run execute if score $pf_cur ap_flags <= $pf_max ap_flags \
-  run scoreboard players set $pf_ok ap_flags 1
-execute unless score $pf_ok ap_flags matches 1 \
-  run tellraw @a [{"text":"[AdminPower] ","color":"gold"},{"text":"⚠ Uyumsuz MC sürümü! ","color":"red"},{"text":"Bu pack 1.21.1–1.21.4 için tasarlandı.","color":"yellow"}]
+execute if score $pf_cur ap_flags >= $pf_min ap_flags run execute if score $pf_cur ap_flags <= $pf_max ap_flags run scoreboard players set $pf_ok ap_flags 1
+execute unless score $pf_ok ap_flags matches 1 run tellraw @a [{"text":"[AdminPower] ","color":"gold"},{"text":"⚠ Uyumsuz MC sürümü! ","color":"red"},{"text":"Bu pack 1.21.5–1.21.11 için tasarlandı.","color":"yellow"}]

@@ -1,2 +1,2 @@
-give @s carrot_on_a_stick[minecraft:custom_data={ap_item:"freeze_wand"},minecraft:item_name='{"text":"Dondurma Değneği","color":"aqua","bold":true,"italic":false}',minecraft:lore=['{"text":"Sağ tık → Herkesi Dondur / Çöz (CD: 60sn)","color":"gray","italic":false}'],minecraft:custom_model_data={floats:[1005.0f]}]
+give @s carrot_on_a_stick[minecraft:custom_data={ap_item:"freeze_wand"},minecraft:item_name={text:"Dondurma Değneği",color:"aqua",bold:true,italic:false},minecraft:lore=[{text:"Sağ tık → Herkesi Dondur / Çöz (CD: 60sn)",color:"gray",italic:false}],minecraft:custom_model_data={floats:[1005.0f]}]
 tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"❄ Dondurma Değneği verildi!","color":"aqua"}]

@@ -1,0 +1,90 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Trigger Menüsü [6/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "⚡ Trigger Ana Menüsü",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:triggers/main_menu"
+      }
+    },
+    {
+      "label": "🏷 /tag @s add op  →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "🏷 Tag Ekle",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:single_option",
+              "key": "target",
+              "label": "🎯 Hedef",
+              "options": [
+                {
+                  "id": "@s",
+                  "display": "Kendim"
+                },
+                {
+                  "id": "@p",
+                  "display": "En Yakın"
+                },
+                {
+                  "id": "@a",
+                  "display": "Herkes"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:text",
+              "key": "tag",
+              "label": "🏷 Tag",
+              "max_length": 64,
+              "initial": "op"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Tag Ekle",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/tag $(target) add $(tag)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page6"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page5"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page7"
+      }
+    }
+  ]
+}

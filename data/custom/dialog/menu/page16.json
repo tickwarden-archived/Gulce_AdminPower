@@ -1,0 +1,151 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Dünya & Ekipman [16/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "🕐 Zaman Dondur/Çöz Toggle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:time_freeze"
+      }
+    },
+    {
+      "label": "🐺 Mob Üreme Toggle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:mob_spawn_toggle"
+      }
+    },
+    {
+      "label": "😈 Tanrı Modu (Hepsi)  (3dk CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:god_all"
+      }
+    },
+    {
+      "label": "🛡 Netherit Zırh Seti  (5dk CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:give_armor"
+      }
+    },
+    {
+      "label": "🔮 Ölümsüzlük Totemi  (2dk CD, 3x)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:give_totem"
+      }
+    },
+    {
+      "label": "📋 Oyuncu Bilgisi",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:player_info"
+      }
+    },
+    {
+      "label": "✈ Uçuş Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_fly_wand"
+      }
+    },
+    {
+      "label": "🔊 Ses Çal →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "🔊 Ses Çal",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "sound",
+              "label": "🎵 Ses ID",
+              "max_length": 128,
+              "initial": "minecraft:entity.player.levelup"
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "target",
+              "label": "🎯 Hedef",
+              "options": [
+                {
+                  "id": "@s",
+                  "display": "Kendim"
+                },
+                {
+                  "id": "@a",
+                  "display": "Herkes"
+                },
+                {
+                  "id": "@p",
+                  "display": "En Yakın"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "vol",
+              "label": "🔊 Ses",
+              "options": [
+                {
+                  "id": "0.5",
+                  "display": "Düşük"
+                },
+                {
+                  "id": "1",
+                  "display": "Normal"
+                },
+                {
+                  "id": "2",
+                  "display": "Yüksek"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "▶ Çal",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/playsound $(sound) master $(target) ~ ~ ~ $(vol) 1"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page16"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "⚙ AME Araçları →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:ame/menu"
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page15"
+      }
+    }
+  ]
+}

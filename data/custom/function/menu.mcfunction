@@ -1,2 +1,4 @@
-function custom:menu/page1
-tellraw @s [{"text":"⚙ AME Araçları","color":"aqua","clickEvent":{"action":"run_command","value":"/function custom:ame/menu_page"},"hoverEvent":{"action":"show_text","value":"Log, CD Durumu, Config, Yetki Sync"}}]
+execute if entity @s[tag=ap.owner,tag=ap.admin] run return run dialog show @s custom:menu/page1
+execute if entity @s[tag=ap.admin] run return run dialog show @s custom:menu/page1
+execute unless entity @s[tag=ap.admin] unless entity @s[tag=op] run return run tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"❌ Bu menüyü açmak için yetkiniz yok.","color":"red"}]
+dialog show @s custom:menu/page1

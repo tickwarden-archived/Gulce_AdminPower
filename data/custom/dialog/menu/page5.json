@@ -1,0 +1,213 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Yönetim [5/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "🗑 Envanteri Temizle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:clear_inventory"
+      }
+    },
+    {
+      "label": "🌍 Spawn'a Işınla",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:util_tp_spawn"
+      }
+    },
+    {
+      "label": "🏹 128 Ok Ver",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:util_give_arrows"
+      }
+    },
+    {
+      "label": "💀 Yakın Mob Temizle  (30 blok)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:util_kill_nearby_mobs"
+      }
+    },
+    {
+      "label": "💨 5×5×5 Alan Temizle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:fill_clear"
+      }
+    },
+    {
+      "label": "🌐 Worldborder Ayarla →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "🌐 Worldborder",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:single_option",
+              "key": "size",
+              "label": "📏 Boyut",
+              "options": [
+                {
+                  "id": "100",
+                  "display": "100 blok"
+                },
+                {
+                  "id": "500",
+                  "display": "500 blok"
+                },
+                {
+                  "id": "1000",
+                  "display": "1000 blok"
+                },
+                {
+                  "id": "5000",
+                  "display": "5000 blok"
+                },
+                {
+                  "id": "10000",
+                  "display": "10000 blok"
+                },
+                {
+                  "id": "60000000",
+                  "display": "Sınırsız"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "time",
+              "label": "⏱ Geçiş Süresi (sn)",
+              "options": [
+                {
+                  "id": "0",
+                  "display": "Anlık"
+                },
+                {
+                  "id": "5",
+                  "display": "5sn"
+                },
+                {
+                  "id": "30",
+                  "display": "30sn"
+                },
+                {
+                  "id": "60",
+                  "display": "1dk"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Ayarla",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/worldborder set $(size) $(time)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page5"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "📢 Duyuru Gönder →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "📢 Duyuru Gönder",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "msg",
+              "label": "💬 Mesaj",
+              "max_length": 256
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "color",
+              "label": "🎨 Renk",
+              "options": [
+                {
+                  "id": "gold",
+                  "display": "Altın"
+                },
+                {
+                  "id": "red",
+                  "display": "Kırmızı"
+                },
+                {
+                  "id": "green",
+                  "display": "Yeşil"
+                },
+                {
+                  "id": "aqua",
+                  "display": "Açık Mavi"
+                },
+                {
+                  "id": "white",
+                  "display": "Beyaz"
+                },
+                {
+                  "id": "yellow",
+                  "display": "Sarı"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "📨 Gönder",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/title @a title {text:\"$(msg)\",color:\"$(color)\",bold:true}"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page5"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page4"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page6"
+      }
+    }
+  ]
+}

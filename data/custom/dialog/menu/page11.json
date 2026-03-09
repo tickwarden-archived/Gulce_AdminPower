@@ -1,0 +1,69 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Token Ekonomisi [11/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "💰 Bakiyemi Gör",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_balance"
+      }
+    },
+    {
+      "label": "➕ Token Kazan  (60sn CD, +10)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_earn"
+      }
+    },
+    {
+      "label": "❤ -5T: Tam Can",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_spend_heal"
+      }
+    },
+    {
+      "label": "💨 -10T: Speed II 30sn",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_spend_speed"
+      }
+    },
+    {
+      "label": "💎 -15T: 16 Elmas",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_spend_diamond"
+      }
+    },
+    {
+      "label": "🎁 Yakına +10 Token Ver",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_give_target"
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page10"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page12"
+      }
+    }
+  ]
+}

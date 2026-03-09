@@ -1,0 +1,76 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Trigger Menüsü [2/2]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "❤ İyileştir (Trigger)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_heal_self set 1"
+      }
+    },
+    {
+      "label": "🍖 Doyur (Trigger)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_feed_self set 1"
+      }
+    },
+    {
+      "label": "💨 Hız (Trigger)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_speed_boost set 1"
+      }
+    },
+    {
+      "label": "🔧 Araçlar (Trigger)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_give_tools set 1"
+      }
+    },
+    {
+      "label": "☀ Gündüz (Trigger)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_toggle_day set 1"
+      }
+    },
+    {
+      "label": "🌙 Gece (Trigger)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_toggle_night set 1"
+      }
+    },
+    {
+      "label": "📋 Menü (Trigger)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_main_menu set 1"
+      }
+    },
+    {
+      "label": "🎮 Creative (Trigger)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_creative set 1"
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:triggers/page1"
+      }
+    }
+  ]
+}

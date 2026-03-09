@@ -1,6 +1,1 @@
-tellraw @s ["",{"text":"═══[ AdminPower v1.2.0 — Sayfa 5/16 ]═══","color":"gold","bold":true}]
-tellraw @s ["",{"text":"📦 Yönetim","color":"gray"},{"text":" ─────────────────","color":"dark_gray"}]
-tellraw @s ["",{"text":"🗑 Envanter Temizle","color":"red","clickEvent":{"action":"run_command","value":"/function custom:clear_inventory"},"hoverEvent":{"action":"show_text","value":"CD yok • Kendi envanterini temizle"}}]
-tellraw @s ["",{"text":"🌍 Spawn'a Işınla","color":"green","clickEvent":{"action":"run_command","value":"/function custom:util_tp_spawn"},"hoverEvent":{"action":"show_text","value":"CD yok • 0 100 0"}},{"text":"  "},{"text":"🏹 128 Ok Ver","color":"dark_green","clickEvent":{"action":"run_command","value":"/function custom:util_give_arrows"},"hoverEvent":{"action":"show_text","value":"CD yok"}}]
-tellraw @s ["",{"text":"💀 Yakın Mob Temizle","color":"dark_red","clickEvent":{"action":"run_command","value":"/function custom:util_kill_nearby_mobs"},"hoverEvent":{"action":"show_text","value":"CD yok • 30 blok içindeki moblar"}},{"text":"  "},{"text":"💨 5x5x5 Temizle","color":"gray","clickEvent":{"action":"run_command","value":"/function custom:fill_clear"},"hoverEvent":{"action":"show_text","value":"CD yok • Çevrendeki 5x5x5 alanı sil"}}]
-tellraw @s ["",{"text":"◀ Önceki","color":"yellow","clickEvent":{"action":"run_command","value":"/function custom:menu/page4"}},{"text":"  "},{"text":"Sonraki ▶","color":"yellow","clickEvent":{"action":"run_command","value":"/function custom:menu/page6"}}]
+dialog show @s custom:menu/page5
