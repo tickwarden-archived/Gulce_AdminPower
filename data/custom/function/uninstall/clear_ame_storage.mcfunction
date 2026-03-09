@@ -107,5 +107,7 @@ data remove storage custom:tmp player
 data remove storage custom:tmp mode
 data remove storage custom:tmp level
 data remove storage custom:tmp entity
+data remove storage custom:meta ap_objectives_done
+data remove storage custom:meta mc_compat
 
 tellraw @s [{"text":"  ✓ AME storage temizlendi","color":"dark_green"}]
