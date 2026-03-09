@@ -1,1 +1,0 @@
-function custom:exec/token_give_target

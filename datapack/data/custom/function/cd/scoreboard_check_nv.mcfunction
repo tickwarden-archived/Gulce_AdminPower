@@ -1,1 +1,0 @@
-function custom:exec/night_vision_self
