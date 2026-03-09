@@ -9,82 +9,20 @@
   "can_close_with_escape": true,
   "pause": false,
   "actions": [
-    {
-      "label": "☀ Hava Aç",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_clear_weather set 1"
-      }
-    },
-    {
-      "label": "🌧 Yağmur",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_rain_weather set 1"
-      }
-    },
-    {
-      "label": "🌞 Gündüz",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_toggle_day set 1"
-      }
-    },
-    {
-      "label": "🌙 Gece",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_toggle_night set 1"
-      }
-    },
-    {
-      "label": "❤ İyileştir",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_heal_self set 1"
-      }
-    },
-    {
-      "label": "🍖 Doyur",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_feed_self set 1"
-      }
-    },
-    {
-      "label": "💨 Hız",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_speed_boost set 1"
-      }
-    },
-    {
-      "label": "🔧 Araçlar",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_give_tools set 1"
-      }
-    },
-    {
-      "label": "🎮 Creative",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_creative set 1"
-      }
-    },
-    {
-      "label": "📋 Ana Menü",
-      "action": {
-        "type": "minecraft:run_command",
-        "command": "/trigger ap_main_menu set 1"
-      }
-    },
-    {
-      "label": "Sonraki ▶",
-      "action": {
-        "type": "minecraft:show_dialog",
-        "dialog": "custom:triggers/page2"
-      }
-    }
+    {"label": "☀ Hava Aç",   "action": {"type": "minecraft:run_command","command": "/trigger ap_clear_weather set 1"}},
+    {"label": "🌧 Yağmur",   "action": {"type": "minecraft:run_command","command": "/trigger ap_rain_weather set 1"}},
+    {"label": "🌞 Gündüz",   "action": {"type": "minecraft:run_command","command": "/trigger ap_toggle_day set 1"}},
+    {"label": "🌙 Gece",     "action": {"type": "minecraft:run_command","command": "/trigger ap_toggle_night set 1"}},
+    {"label": "❤ İyileştir", "action": {"type": "minecraft:run_command","command": "/trigger ap_heal_self set 1"}},
+    {"label": "🍖 Doyur",    "action": {"type": "minecraft:run_command","command": "/trigger ap_feed_self set 1"}},
+    {"label": "💨 Hız",      "action": {"type": "minecraft:run_command","command": "/trigger ap_speed_boost set 1"}},
+    {"label": "🔧 Araçlar",  "action": {"type": "minecraft:run_command","command": "/trigger ap_give_tools set 1"}},
+    {"label": "🎮 Creative", "action": {"type": "minecraft:run_command","command": "/trigger ap_creative set 1"}},
+    {"label": "📋 Ana Menü", "action": {"type": "minecraft:run_command","command": "/trigger ap_main_menu set 1"}},
+    {"label": "🛡 Zırh Ver", "action": {"type": "minecraft:run_command","command": "/trigger ap_give_armor set 1"}},
+    {"label": "🧊 Dondur",   "action": {"type": "minecraft:run_command","command": "/trigger ap_freeze_self set 1"}},
+    {"label": "💀 Mob Temizlik", "action": {"type": "minecraft:run_command","command": "/trigger ap_kill_mobs set 1"}},
+    {"label": "👁 Gece Görüşü", "action": {"type": "minecraft:run_command","command": "/trigger ap_night_vision set 1"}},
+    {"label": "Sonraki ▶",   "action": {"type": "minecraft:show_dialog","dialog": "custom:triggers/page2"}}
   ]
 }

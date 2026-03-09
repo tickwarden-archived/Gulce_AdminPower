@@ -1,5 +1,5 @@
 # ╔═══════════════════════════════════════════════════════════╗
-# ║  AdminPower v1.2.0 — VERSION CHECK                       ║
+# ║  AdminPower v1.3.4 — VERSION CHECK                       ║
 # ║  Her /reload'da çalışır. İki kontrol yapar:              ║
 # ║   1) Pack sürümü değişmiş mi? (storage karşılaştırma)    ║
 # ║   2) MC sürümü destekleniyor mu? (pack_format testi)     ║
@@ -9,17 +9,17 @@
 # storage'da kayıtlı önceki sürümü oku
 # İlk yüklemede storage boş olur → "none" sayılır
 
-execute if data storage custom:meta {ap_version:"1.2.0"} run scoreboard players set $ver_ok ap_flags 1
-execute unless data storage custom:meta {ap_version:"1.2.0"} run scoreboard players set $ver_ok ap_flags 0
+execute if data storage custom:meta {ap_version:"1.3.4"} run scoreboard players set $ver_ok ap_flags 1
+execute unless data storage custom:meta {ap_version:"1.3.4"} run scoreboard players set $ver_ok ap_flags 0
 
 # Sürüm eşleşiyor → yeniden yükleme mesajı
-execute if score $ver_ok ap_flags matches 1 run tellraw @a [{"text":"[AdminPower] ","color":"gold"},{"text":"✅ v1.2.0","color":"green"},{"text":" yüklendi. Sürüm uyumlu.","color":"gray"}]
+execute if score $ver_ok ap_flags matches 1 run tellraw @a [{"text":"[AdminPower] ","color":"gold"},{"text":"✅ v1.3.4","color":"green"},{"text":" yüklendi. Sürüm uyumlu.","color":"gray"}]
 
 # Sürüm farklı (ilk kurulum veya güncelleme)
 execute if score $ver_ok ap_flags matches 0 run function custom:version_warn
 
 # Sürümü storage'a yaz (bu noktadan sonra artık 1.0.0 kayıtlı)
-data modify storage custom:meta ap_version set value "1.2.0"
+data modify storage custom:meta ap_version set value "1.3.4"
 data modify storage custom:meta pack_format set value 94
 data modify storage custom:meta mc_compat set value "1.21.11"
 

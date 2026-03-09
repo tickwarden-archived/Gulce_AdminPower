@@ -1,0 +1,3 @@
+# custom:flag_list_trigger_wrapper  |  ap_perm >= 2
+execute unless score @s ap_perm matches 2.. run return run tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"❌ mod+ yetkisi gerekli.","color":"red"}]
+function custom:exec/flag_list_trigger

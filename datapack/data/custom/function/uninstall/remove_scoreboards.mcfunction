@@ -51,4 +51,31 @@ scoreboard objectives remove ap_cd_wt
 scoreboard objectives remove ap_cd_garm
 scoreboard objectives remove ap_cd_gto
 scoreboard objectives remove ap_cd_gda
+# v1.3.3 trigger objectives
+scoreboard objectives remove ap_give_armor
+scoreboard objectives remove ap_freeze_self
+scoreboard objectives remove ap_tp_spawn
+scoreboard objectives remove ap_give_xp
+scoreboard objectives remove ap_invisibility
+scoreboard objectives remove ap_fire_resist
+scoreboard objectives remove ap_give_diamond
+scoreboard objectives remove ap_give_netherite
+scoreboard objectives remove ap_macro_self
+# v1.3.3 CD objectives
+scoreboard objectives remove ap_cd_frs
+scoreboard objectives remove ap_cd_tps
+scoreboard objectives remove ap_cd_inv
+scoreboard objectives remove ap_cd_fr
+# v1.3.4 trigger + CD objectives
+scoreboard objectives remove ap_kill_mobs
+scoreboard objectives remove ap_night_vision
+scoreboard objectives remove ap_arrow_self
+scoreboard objectives remove ap_smite_trigger
+scoreboard objectives remove ap_starter_self
+scoreboard objectives remove ap_reload
+scoreboard objectives remove ap_flag_list
+scoreboard objectives remove ap_cd_km
+scoreboard objectives remove ap_cd_nv
+scoreboard objectives remove ap_cd_ar
+scoreboard objectives remove ap_cd_sst
 tellraw @s [{"text":"  ✓ scoreboard'lar kaldırıldı","color":"dark_green"}]

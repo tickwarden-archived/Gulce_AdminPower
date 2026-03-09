@@ -36,3 +36,13 @@ scoreboard players set @s ap_cd_wt 0
 scoreboard players set @s ap_cd_garm 0
 scoreboard players set @s ap_cd_gto 0
 scoreboard players set @s ap_cd_gda 0
+# v1.3.3 yeni CD'ler
+scoreboard players set @s ap_cd_frs 0
+scoreboard players set @s ap_cd_tps 0
+scoreboard players set @s ap_cd_inv 0
+scoreboard players set @s ap_cd_fr 0
+# v1.3.4 yeni CD'ler
+scoreboard players set @s ap_cd_km 0
+scoreboard players set @s ap_cd_nv 0
+scoreboard players set @s ap_cd_ar 0
+scoreboard players set @s ap_cd_sst 0

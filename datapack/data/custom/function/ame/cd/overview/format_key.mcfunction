@@ -13,3 +13,8 @@ execute if data storage custom:ame {overview_key:"ap_cd_lt"} run data modify sto
 execute if data storage custom:ame {overview_key:"ap_cd_ta"} run data modify storage custom:ame overview_label set value "Hepsini TP"
 execute if data storage custom:ame {overview_key:"ap_cd_gda"} run data modify storage custom:ame overview_label set value "God All"
 execute if data storage custom:ame {overview_key:"ap_cd_mc"} run data modify storage custom:ame overview_label set value "Multi-Cmd"
+# v1.3.3 yeni label'lar
+execute if data storage custom:ame {overview_key:"ap_cd_frs"} run data modify storage custom:ame overview_label set value "Kendini Dondur"
+execute if data storage custom:ame {overview_key:"ap_cd_tps"} run data modify storage custom:ame overview_label set value "Spawn'a TP"
+execute if data storage custom:ame {overview_key:"ap_cd_inv"} run data modify storage custom:ame overview_label set value "Görünmezlik"
+execute if data storage custom:ame {overview_key:"ap_cd_fr"} run data modify storage custom:ame overview_label set value "Yanmaz"

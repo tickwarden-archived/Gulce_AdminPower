@@ -10,59 +10,91 @@
   "pause": false,
   "actions": [
     {
-      "label": "❤ İyileştir (Trigger)",
+      "label": "🎯 Spawn'a TP",
       "action": {
         "type": "minecraft:run_command",
-        "command": "/trigger ap_heal_self set 1"
+        "command": "/trigger ap_tp_spawn set 1"
       }
     },
     {
-      "label": "🍖 Doyur (Trigger)",
+      "label": "⭐ XP Ver",
       "action": {
         "type": "minecraft:run_command",
-        "command": "/trigger ap_feed_self set 1"
+        "command": "/trigger ap_give_xp set 1"
       }
     },
     {
-      "label": "💨 Hız (Trigger)",
+      "label": "🌟 Görünmezlik",
       "action": {
         "type": "minecraft:run_command",
-        "command": "/trigger ap_speed_boost set 1"
+        "command": "/trigger ap_invisibility set 1"
       }
     },
     {
-      "label": "🔧 Araçlar (Trigger)",
+      "label": "🔥 Yanmaz",
       "action": {
         "type": "minecraft:run_command",
-        "command": "/trigger ap_give_tools set 1"
+        "command": "/trigger ap_fire_resist set 1"
       }
     },
     {
-      "label": "☀ Gündüz (Trigger)",
+      "label": "💎 Diamond Ver",
       "action": {
         "type": "minecraft:run_command",
-        "command": "/trigger ap_toggle_day set 1"
+        "command": "/trigger ap_give_diamond set 1"
       }
     },
     {
-      "label": "🌙 Gece (Trigger)",
+      "label": "🗡 Netherite Ver",
       "action": {
         "type": "minecraft:run_command",
-        "command": "/trigger ap_toggle_night set 1"
+        "command": "/trigger ap_give_netherite set 1"
       }
     },
     {
-      "label": "📋 Menü (Trigger)",
+      "label": "🏹 Ok Hasar",
       "action": {
         "type": "minecraft:run_command",
-        "command": "/trigger ap_main_menu set 1"
+        "command": "/trigger ap_arrow_self set 1"
       }
     },
     {
-      "label": "🎮 Creative (Trigger)",
+      "label": "⚡ Herkese Yıldırım",
       "action": {
         "type": "minecraft:run_command",
-        "command": "/trigger ap_creative set 1"
+        "command": "/trigger ap_smite_trigger set 1"
+      }
+    },
+    {
+      "label": "🎒 Starter Pack",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_starter_self set 1"
+      }
+    },
+    {
+      "label": "🔄 Reload",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_reload set 1"
+      }
+    },
+    {
+      "label": "🏳 Flag Durumu",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_flag_list set 1"
+      }
+    },
+    {
+      "label": "🧰 Makro Eylem",
+      "tooltip": {
+        "text": "Eldeki carrot_on_a_stick'in\ncustom_data.ap_action'una gore exec cagiriyor.\nOrnek: custom_data={ap_action:\"give_armor\"}",
+        "color": "gray"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger ap_macro_self set 1"
       }
     },
     {

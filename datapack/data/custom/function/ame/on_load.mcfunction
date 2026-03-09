@@ -116,6 +116,37 @@ data modify storage macro:input key set value "ap_cd_god_all"
 data modify storage macro:input value set value 3600
 function custom:ame/config/set_default_int with storage macro:input {}
 
+
+# ── v1.3.4 CD Config'leri ─────────────────────────────────────
+data modify storage macro:input key set value "ap_cd_kill_mobs"
+data modify storage macro:input value set value 1200
+function custom:ame/config/set_default_int with storage macro:input {}
+
+data modify storage macro:input key set value "ap_cd_arrow_self"
+data modify storage macro:input value set value 40
+function custom:ame/config/set_default_int with storage macro:input {}
+
+data modify storage macro:input key set value "ap_cd_starter_self"
+data modify storage macro:input value set value 12000
+function custom:ame/config/set_default_int with storage macro:input {}
+
+# ── v1.3.3 CD Config'leri (yeni trigger'lar) ─────────────────
+data modify storage macro:input key set value "ap_cd_freeze_self"
+data modify storage macro:input value set value 400
+function custom:ame/config/set_default_int with storage macro:input {}
+
+data modify storage macro:input key set value "ap_cd_tp_spawn_self"
+data modify storage macro:input value set value 400
+function custom:ame/config/set_default_int with storage macro:input {}
+
+data modify storage macro:input key set value "ap_cd_invisibility"
+data modify storage macro:input value set value 1200
+function custom:ame/config/set_default_int with storage macro:input {}
+
+data modify storage macro:input key set value "ap_cd_fire_resist"
+data modify storage macro:input value set value 1200
+function custom:ame/config/set_default_int with storage macro:input {}
+
 # Yardımcı aksiyonlar
 data modify storage macro:input key set value "ap_cd_broadcast"
 data modify storage macro:input value set value 200
@@ -148,6 +179,28 @@ function custom:ame/config/set_default_int with storage macro:input {}
 data modify storage macro:input key set value "ap_cd_multicmd"
 data modify storage macro:input value set value 200
 function custom:ame/config/set_default_int with storage macro:input {}
+
+# ── Reload koruması: önceki event handler'ları temizle ─────────
+# macro:event/register APPEND eder — her reload tekrar çalışmadan önce
+# tüm AP event'lerini sıfırla, böylece duplicate handler oluşmaz.
+data modify storage macro:input event set value "ap_fireball_used"
+function macro:event/unregister with storage macro:input {}
+data modify storage macro:input event set value "ap_explosion_used"
+function macro:event/unregister with storage macro:input {}
+data modify storage macro:input event set value "ap_ban_used"
+function macro:event/unregister with storage macro:input {}
+data modify storage macro:input event set value "ap_heal_all_used"
+function macro:event/unregister with storage macro:input {}
+data modify storage macro:input event set value "ap_lightning_used"
+function macro:event/unregister with storage macro:input {}
+data modify storage macro:input event set value "ap_tp_used"
+function macro:event/unregister with storage macro:input {}
+data modify storage macro:input event set value "ap_kick_used"
+function macro:event/unregister with storage macro:input {}
+data modify storage macro:input event set value "ap_god_all_used"
+function macro:event/unregister with storage macro:input {}
+data modify storage macro:input event set value "ap_multicmd_used"
+function macro:event/unregister with storage macro:input {}
 
 # ────────────────────────────────────────────────────────────
 # AME Event Kayıtları

@@ -37,4 +37,14 @@ function custom:ame/cd/overview/show_entry with storage macro:input {}
 data modify storage macro:input key set value "ap_cd_mc"
 function custom:ame/cd/overview/show_entry with storage macro:input {}
 
+# v1.3.3 yeni CD'ler
+data modify storage macro:input key set value "ap_cd_frs"
+function custom:ame/cd/overview/show_entry with storage macro:input {}
+data modify storage macro:input key set value "ap_cd_tps"
+function custom:ame/cd/overview/show_entry with storage macro:input {}
+data modify storage macro:input key set value "ap_cd_inv"
+function custom:ame/cd/overview/show_entry with storage macro:input {}
+data modify storage macro:input key set value "ap_cd_fr"
+function custom:ame/cd/overview/show_entry with storage macro:input {}
+
 tellraw @s [{"text":"─────────────────────────────","color":"dark_gray"},{"text":"  ⏩ Sıfırla","color":"dark_green","italic":true,click_event:{"action":"run_command","command":"/function custom:cd/reset_all"}}]

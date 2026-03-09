@@ -36,3 +36,14 @@ scoreboard players remove @a[scores={ap_cd_wt=1..}] ap_cd_wt 1
 scoreboard players remove @a[scores={ap_cd_garm=1..}] ap_cd_garm 1
 scoreboard players remove @a[scores={ap_cd_gto=1..}] ap_cd_gto 1
 scoreboard players remove @a[scores={ap_cd_gda=1..}] ap_cd_gda 1
+
+# ── v1.3.3 CD Sayaçları ──────────────────────────────────────
+scoreboard players remove @a[scores={ap_cd_frs=1..}] ap_cd_frs 1
+scoreboard players remove @a[scores={ap_cd_tps=1..}] ap_cd_tps 1
+scoreboard players remove @a[scores={ap_cd_inv=1..}] ap_cd_inv 1
+scoreboard players remove @a[scores={ap_cd_fr=1..}] ap_cd_fr 1
+
+# ── v1.3.4 CD Sayaçları ──────────────────────────────────────
+scoreboard players remove @a[scores={ap_cd_km=1..}] ap_cd_km 1
+scoreboard players remove @a[scores={ap_cd_ar=1..}] ap_cd_ar 1
+scoreboard players remove @a[scores={ap_cd_sst=1..}] ap_cd_sst 1
