@@ -17,6 +17,10 @@ function custom:uninstall/remove_tags
 # 4. Scoreboard'ları sil
 function custom:uninstall/remove_scoreboards
 
+# Diğer
+function custom:uninstall/clear_ame_storage
+function custom:uninstall/clear_player_cooldowns
+
 # 5. AME storage temizliği (AME varsa)
 execute if score $ame ap_flags matches 1 run function custom:uninstall/clear_ame_storage
 
@@ -25,3 +29,5 @@ forceload remove 0 300
 
 tellraw @a [{"text":"[AdminPower] ","color":"gold"},{"text":"✅ Kaldırma tamamlandı. Datapack'i listeden çıkarabilirsin.","color":"green"}]
 tellraw @a [{"text":"  /datapack disable \"file/Gulce_AdminPower_v1_3_3-AME.zip\"","color":"gray","italic":true}]
+
+playsound minecraft:block.note_block.bell master @s ~ ~ ~ 4 1
