@@ -1,0 +1,104 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Admin Değnekleri [12/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "📋 Menü Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_menu_wand"
+      }
+    },
+    {
+      "label": "❤ İyileştirme Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_heal_wand"
+      }
+    },
+    {
+      "label": "💨 Hız Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_speed_wand"
+      }
+    },
+    {
+      "label": "🌀 Işınlanma Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_tp_wand"
+      }
+    },
+    {
+      "label": "❄ Dondurma Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_freeze_wand"
+      }
+    },
+    {
+      "label": "⚡ Yıldırım Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_lightning_wand"
+      }
+    },
+    {
+      "label": "🔥 Ateş Topu Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_fireball_wand"
+      }
+    },
+    {
+      "label": "✈ Uçuş Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_fly_wand"
+      }
+    },
+    {
+      "label": "✅ Hepsini Ver",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_all"
+      }
+    },
+    {
+      "label": "👻 Vanish Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_vanish_wand"
+      }
+    },
+    {
+      "label": "🎲 Rastgele TP Değneği",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/give_random_tp_wand"
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page11"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page13"
+      }
+    }
+  ]
+}

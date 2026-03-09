@@ -1,0 +1,1 @@
+return run execute if entity @s[type=minecraft:player,tag=ap.mod] at @s run function custom:menu

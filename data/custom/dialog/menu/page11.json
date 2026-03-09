@@ -1,0 +1,140 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Token Ekonomisi [11/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "💰 Bakiyemi Gör",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_balance"
+      }
+    },
+    {
+      "label": "➕ Token Kazan  (60sn CD, +10)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_earn"
+      }
+    },
+    {
+      "label": "❤ -5T: Tam Can",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_spend_heal"
+      }
+    },
+    {
+      "label": "💨 -10T: Speed II 30sn",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_spend_speed"
+      }
+    },
+    {
+      "label": "💎 -15T: 16 Elmas",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_spend_diamond"
+      }
+    },
+    {
+      "label": "🎁 Yakına +10 Token Ver",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:token_give_target"
+      }
+    },
+    {
+      "label": "➖ Hedeften Token Sil →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "➖ Token Sil",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "target",
+              "label": "🎯 Hedef",
+              "max_length": 64,
+              "initial": "@p"
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "amount",
+              "label": "💰 Miktar",
+              "options": [
+                {
+                  "id": "5",
+                  "display": "-5 Token"
+                },
+                {
+                  "id": "10",
+                  "display": "-10 Token"
+                },
+                {
+                  "id": "25",
+                  "display": "-25 Token"
+                },
+                {
+                  "id": "50",
+                  "display": "-50 Token"
+                },
+                {
+                  "id": "100",
+                  "display": "-100 Token"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "➖ Sil",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/scoreboard players remove $(target) ap_tokens $(amount)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page11"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "📊 Token Sıralaması Toggle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:exec/token_leaderboard_toggle"
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page10"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page12"
+      }
+    }
+  ]
+}

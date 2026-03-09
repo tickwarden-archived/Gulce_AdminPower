@@ -1,0 +1,195 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Oyun Modu & Hava [2/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "🎮 Oyun Modu Değiştir →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "🎮 Oyun Modu Değiştir",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:single_option",
+              "key": "gm",
+              "label": "🎮 Mod",
+              "options": [
+                {
+                  "id": "creative",
+                  "display": "Yaratıcı"
+                },
+                {
+                  "id": "survival",
+                  "display": "Hayatta Kalma"
+                },
+                {
+                  "id": "spectator",
+                  "display": "Gözlemci"
+                },
+                {
+                  "id": "adventure",
+                  "display": "Macera"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "target",
+              "label": "🎯 Hedef",
+              "options": [
+                {
+                  "id": "@s",
+                  "display": "Kendim"
+                },
+                {
+                  "id": "@a",
+                  "display": "Herkes"
+                },
+                {
+                  "id": "@p",
+                  "display": "En Yakın"
+                },
+                {
+                  "id": "@r",
+                  "display": "Rastgele"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Değiştir",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/gamemode $(gm) $(target)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "☀ Gündüz",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:set_day"
+      }
+    },
+    {
+      "label": "🌙 Gece",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:util_day_time"
+      }
+    },
+    {
+      "label": "⏰ Özel Zaman →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "⏰ Özel Zaman Ayarla",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:single_option",
+              "key": "t",
+              "label": "🕐 Zaman",
+              "options": [
+                {
+                  "id": "0",
+                  "display": "Gece Yarısı (0)"
+                },
+                {
+                  "id": "1000",
+                  "display": "Sabah (1000)"
+                },
+                {
+                  "id": "6000",
+                  "display": "Öğlen (6000)"
+                },
+                {
+                  "id": "12000",
+                  "display": "Akşam (12000)"
+                },
+                {
+                  "id": "18000",
+                  "display": "Gece (18000)"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Ayarla",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/time set $(t)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "☁ Hava Aç",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:weather_clear"
+      }
+    },
+    {
+      "label": "🌧 Yağmur",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:rain"
+      }
+    },
+    {
+      "label": "⛈ Fırtına  (20sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:weather_thunder"
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page1"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page3"
+      }
+    }
+  ]
+}

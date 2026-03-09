@@ -1,0 +1,239 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Utility [1/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "❤ İyileştir  (10sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:util_heal_self"
+      }
+    },
+    {
+      "label": "🍖 Doyur  (10sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:util_feed_self"
+      }
+    },
+    {
+      "label": "💨 Hız  (30sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:speed_boost"
+      }
+    },
+    {
+      "label": "👁 Gece Görüşü",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:util_night_vision"
+      }
+    },
+    {
+      "label": "🗑 Envanter Temizle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:util_clear_inv"
+      }
+    },
+    {
+      "label": "⏳ CD Sıfırla (Kendin)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:cd/reset_all"
+      }
+    },
+    {
+      "label": "⏩ Hedef CD Sıfırla",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:cd/reset_target"
+      }
+    },
+    {
+      "label": "💊 Efekt Ver →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "💊 Efekt Ver",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:single_option",
+              "key": "effect",
+              "label": "🧪 Efekt",
+              "options": [
+                {
+                  "id": "minecraft:speed",
+                  "display": "Hız"
+                },
+                {
+                  "id": "minecraft:strength",
+                  "display": "Güç"
+                },
+                {
+                  "id": "minecraft:regeneration",
+                  "display": "Rejenerasyon"
+                },
+                {
+                  "id": "minecraft:resistance",
+                  "display": "Direnç"
+                },
+                {
+                  "id": "minecraft:fire_resistance",
+                  "display": "Ateş Direnci"
+                },
+                {
+                  "id": "minecraft:night_vision",
+                  "display": "Gece Görüşü"
+                },
+                {
+                  "id": "minecraft:invisibility",
+                  "display": "Görünmezlik"
+                },
+                {
+                  "id": "minecraft:saturation",
+                  "display": "Tokluk"
+                },
+                {
+                  "id": "minecraft:absorption",
+                  "display": "Emilim"
+                },
+                {
+                  "id": "minecraft:jump_boost",
+                  "display": "Zıplama"
+                },
+                {
+                  "id": "minecraft:slow_falling",
+                  "display": "Yavaş Düşüş"
+                },
+                {
+                  "id": "minecraft:haste",
+                  "display": "Acele"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "amp",
+              "label": "⚡ Seviye",
+              "options": [
+                {
+                  "id": "0",
+                  "display": "I"
+                },
+                {
+                  "id": "1",
+                  "display": "II"
+                },
+                {
+                  "id": "2",
+                  "display": "III"
+                },
+                {
+                  "id": "3",
+                  "display": "IV"
+                },
+                {
+                  "id": "4",
+                  "display": "V"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "dur",
+              "label": "⏱ Süre (sn)",
+              "options": [
+                {
+                  "id": "30",
+                  "display": "30sn"
+                },
+                {
+                  "id": "60",
+                  "display": "1dk"
+                },
+                {
+                  "id": "300",
+                  "display": "5dk"
+                },
+                {
+                  "id": "600",
+                  "display": "10dk"
+                },
+                {
+                  "id": "1800",
+                  "display": "30dk"
+                },
+                {
+                  "id": "3600",
+                  "display": "1sa"
+                },
+                {
+                  "id": "999999",
+                  "display": "Sonsuz"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "target",
+              "label": "🎯 Hedef",
+              "options": [
+                {
+                  "id": "@s",
+                  "display": "Kendim"
+                },
+                {
+                  "id": "@a",
+                  "display": "Herkes"
+                },
+                {
+                  "id": "@p",
+                  "display": "En Yakın"
+                },
+                {
+                  "id": "@r",
+                  "display": "Rastgele"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/effect give $(target) $(effect) $(dur) $(amp) true"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page2"
+      }
+    }
+  ]
+}

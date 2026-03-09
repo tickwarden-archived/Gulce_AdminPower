@@ -1,0 +1,2 @@
+give @s carrot_on_a_stick[minecraft:custom_data={ap_item:"random_tp_wand"},minecraft:item_name={text:"Rastgele TP Değneği",color:"light_purple",bold:true,italic:false},minecraft:lore=[{text:"Sağ tık → -3000..3000 arası rastgele ışınlan (30sn CD)",color:"gray",italic:false}],minecraft:custom_model_data={floats:[1011.0f]}]
+tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"🎲 Rastgele TP Değneği verildi!","color":"light_purple"}]

@@ -1,0 +1,2 @@
+# Kendi yetki seviyeni göster
+tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"📋 Yetki seviyeniz: ","color":"gray"},{"score":{"name":"@s","objective":"ap_perm"},"color":"yellow"},{"text":" / ","color":"dark_gray"},{"text":"0=Yok","color":"white"},{"text":" • ","color":"dark_gray"},{"text":"1=VIP","color":"yellow"},{"text":" • ","color":"dark_gray"},{"text":"2=Mod","color":"blue"},{"text":" • ","color":"dark_gray"},{"text":"3=Admin","color":"red"},{"text":" • ","color":"dark_gray"},{"text":"4=Sahip","color":"gold"}]

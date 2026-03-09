@@ -1,0 +1,136 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Saldırı & Troll [4/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "🔥 Ateş Topu  (5sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:fireball"
+      }
+    },
+    {
+      "label": "💣 Patlama  (30sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:explosion"
+      }
+    },
+    {
+      "label": "❄ Dondur/Çöz Toggle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:items/toggle_freeze"
+      }
+    },
+    {
+      "label": "🌊 Zorla Çöz (Herkesi)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:unfreeze_all"
+      }
+    },
+    {
+      "label": "👁 Gece Görüşü (Hepsi)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:night_vision_all"
+      }
+    },
+    {
+      "label": "🔨 Ban Oyuncuyu",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:ban_player"
+      }
+    },
+    {
+      "label": "✈ Uçuş Toggle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:fly"
+      }
+    },
+    {
+      "label": "✨ Renk Feneri",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:color_beacon"
+      }
+    },
+    {
+      "label": "⚡ Yıldırım Fırlat →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "⚡ Hedefe Yıldırım",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:single_option",
+              "key": "target",
+              "label": "🎯 Hedef Oyuncu",
+              "options": [
+                {
+                  "id": "@s",
+                  "display": "Kendim"
+                },
+                {
+                  "id": "@p",
+                  "display": "En Yakın"
+                },
+                {
+                  "id": "@r",
+                  "display": "Rastgele"
+                },
+                {
+                  "id": "@a",
+                  "display": "Herkes"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "⚡ Yıldır",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/execute at $(target) run summon minecraft:lightning_bolt ~ ~ ~"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page3"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page5"
+      }
+    }
+  ]
+}

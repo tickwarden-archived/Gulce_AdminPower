@@ -1,0 +1,143 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "AdminPower — Eşya & Güç [3/16]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "💎 64 Elmas  (2dk CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:diamond"
+      }
+    },
+    {
+      "label": "🦋 Elytra  (5dk CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:give_elitra"
+      }
+    },
+    {
+      "label": "⭐ 1000 XP  (60sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:give_xp"
+      }
+    },
+    {
+      "label": "🎒 Başlangıç Paketi  (10dk CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:starter_pack"
+      }
+    },
+    {
+      "label": "🔧 Admin Araçlar  (30sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:give_tools"
+      }
+    },
+    {
+      "label": "😈 Tanrı Modu  (2dk CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:invincible"
+      }
+    },
+    {
+      "label": "🎁 Sürpriz Loot  (60sn CD)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:random_loot"
+      }
+    },
+    {
+      "label": "🎁 Özel Item Ver →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "🎁 Özel Item Ver",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "item",
+              "label": "📦 Item ID",
+              "max_length": 256,
+              "initial": "minecraft:diamond"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "count",
+              "label": "🔢 Adet",
+              "max_length": 8,
+              "initial": "1"
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "target",
+              "label": "🎯 Hedef",
+              "options": [
+                {
+                  "id": "@s",
+                  "display": "Kendim"
+                },
+                {
+                  "id": "@a",
+                  "display": "Herkes"
+                },
+                {
+                  "id": "@p",
+                  "display": "En Yakın"
+                },
+                {
+                  "id": "@r",
+                  "display": "Rastgele"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Ver",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/give $(target) $(item) $(count)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page3"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page2"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page4"
+      }
+    }
+  ]
+}

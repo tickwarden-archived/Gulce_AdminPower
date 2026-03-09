@@ -1,0 +1,2 @@
+give @s carrot_on_a_stick[minecraft:custom_data={ap_item:"tp_wand"},minecraft:item_name={text:"Işınlanma Değneği",color:"light_purple",bold:true,italic:false},minecraft:lore=[{text:"Sağ tık → En Yakın Oyuncuya Işınlan (CD: 10sn)",color:"gray",italic:false}],minecraft:custom_model_data={floats:[1004.0f]}]
+tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"🌀 Işınlanma Değneği verildi!","color":"light_purple"}]
