@@ -18,7 +18,8 @@ Bu datapack çalışmak için **macroEngine-dp**'ye ihtiyaç duyar.
 1. Önce [macroEngine-dp](https://github.com/tickwarden/macroEngine-dp)'yi indir ve kur
 2. `Gulce_AdminPower.zip` dosyasını çıkartmadan `dünya/datapacks/` klasörüne koy
 3. Oyunda `/reload` çalıştır
-4. `/function custom:menu` ile başla
+4. `/function custom:perm/set_owner` çalıştır
+5. `/function custom:menu` ile başla
 
 ## 📋 Gereksinimler
 - Minecraft Java Edition 1.20.3 – 1.21.4
