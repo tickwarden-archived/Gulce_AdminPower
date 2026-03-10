@@ -2,7 +2,7 @@
 # Belirtilen oyuncuya gamemode ata
 #
 # Kullanım:
-#   /function custom:macros/player/set_gamemode {player:"IronCrest",mode:"creative"}
+#   /function custom:macros/player/set_gamemode {player:"<oyuncu adu>",mode:"creative"}
 #   mode: creative | survival | spectator | adventure
 # ═══════════════════════════════════════════════════════════
 $gamemode $(mode) $(player)

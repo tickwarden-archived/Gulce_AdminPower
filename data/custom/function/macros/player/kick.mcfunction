@@ -2,6 +2,6 @@
 # Oyuncuyu kickle (sunucu modunda çalışır)
 #
 # Kullanım:
-#   /function custom:macros/player/kick {player:"IronCrest",reason:"Kural ihlali"}
+#   /function custom:macros/player/kick {player:"<oyuncu adu>",reason:"Kural ihlali"}
 # ═══════════════════════════════════════════════════════════
 $kick $(player) $(reason)
