@@ -1,1 +1,2 @@
-function custom:cd/check_sp
+# Geriye dönük uyumluluk — speed_boost'a yönlendir
+function custom:speed_boost

@@ -1,0 +1,261 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "LuckPerms — Gruplar [3/7]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "📋 lp listgroups",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp listgroups"
+      }
+    },
+    {
+      "label": "➕ Grup Oluştur →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp creategroup",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup Adı",
+              "max_length": 64,
+              "initial": "vip"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp creategroup $(group)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page3"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🗑 Grup Sil →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp deletegroup",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup Adı",
+              "max_length": 64,
+              "initial": "vip"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp deletegroup $(group)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page3"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🔠 Prefix Ayarla →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp group setprefix",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "prio",
+              "label": "📊 Öncelik",
+              "max_length": 64,
+              "initial": "10"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "prefix",
+              "label": "🔠 Prefix",
+              "max_length": 32,
+              "initial": "[VIP]"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp group $(group) meta setprefix $(prio) $(prefix)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page3"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🔡 Suffix Ayarla →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp group setsuffix",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "prio",
+              "label": "📊 Öncelik",
+              "max_length": 64,
+              "initial": "10"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "suffix",
+              "label": "🔡 Suffix",
+              "max_length": 32,
+              "initial": "★"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp group $(group) meta setsuffix $(prio) $(suffix)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page3"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "⚖ Ağırlık Ayarla →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp group setweight",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "weight",
+              "label": "⚖ Ağırlık",
+              "max_length": 64,
+              "initial": "20"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp group $(group) setweight $(weight)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page3"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page2"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page4"
+      }
+    },
+    {
+      "label": "◀ AP Menüsü",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page7"
+      }
+    }
+  ]
+}

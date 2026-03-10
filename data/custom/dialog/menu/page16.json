@@ -141,6 +141,20 @@
       }
     },
     {
+      "label": "⚔ PvP Toggle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:pvp_toggle"
+      }
+    },
+    {
+      "label": "🎒 Keep Inventory Toggle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/function custom:keep_inv_toggle"
+      }
+    },
+    {
       "label": "◀ Önceki",
       "action": {
         "type": "minecraft:show_dialog",

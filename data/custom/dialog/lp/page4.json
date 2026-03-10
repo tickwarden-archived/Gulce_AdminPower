@@ -1,0 +1,291 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "LuckPerms — Track/Terfi [4/7]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "📋 lp listtracks",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp listtracks"
+      }
+    },
+    {
+      "label": "➕ Track Oluştur →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp createtrack",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "track",
+              "label": "🛤 Track Adı",
+              "max_length": 64,
+              "initial": "staff"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp createtrack $(track)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🗑 Track Sil →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp deletetrack",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "track",
+              "label": "🛤 Track Adı",
+              "max_length": 64,
+              "initial": "staff"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp deletetrack $(track)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "📎 Track'e Grup Ekle →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp track append",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "track",
+              "label": "🛤 Track",
+              "max_length": 64,
+              "initial": "staff"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp track $(track) append $(group)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "⬆ Oyuncuyu Terfi Et →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp promote",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "track",
+              "label": "🛤 Track",
+              "max_length": 64,
+              "initial": "staff"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) promote $(track)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "⬇ Oyuncuyu Düşür →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp demote",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "track",
+              "label": "🛤 Track",
+              "max_length": 64,
+              "initial": "staff"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) demote $(track)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🔀 Birincil Grubu Değiştir →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp switchprimarygroup",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) switchprimarygroup $(group)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page3"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page5"
+      }
+    },
+    {
+      "label": "◀ AP Menüsü",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page7"
+      }
+    }
+  ]
+}

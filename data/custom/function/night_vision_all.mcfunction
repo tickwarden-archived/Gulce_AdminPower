@@ -14,7 +14,7 @@ execute if entity @s[tag=ap.nv_all] run tellraw @a {"text":"[AdminPower] 👁 Ge
 execute if entity @s[tag=!ap.nv_all] run return 0
 
 # ── Kapalı → aç ──
-effect give @a minecraft:night_vision 99999 0 true
+effect give @a minecraft:night_vision infinite 0 true
 tag @s add ap.nv_all
 playsound minecraft:block.beacon.activate master @a ~ ~ ~ 0.5 2
 tellraw @a {"text":"[AdminPower] 👁 Tüm oyuncular gece görebiliyor!","color":"aqua"}

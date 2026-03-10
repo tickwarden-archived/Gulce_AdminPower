@@ -1,0 +1,120 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "LuckPerms — Genel [1/7]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "📋 lp help",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp help"
+      }
+    },
+    {
+      "label": "ℹ lp info",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp info"
+      }
+    },
+    {
+      "label": "🔄 lp sync",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp sync"
+      }
+    },
+    {
+      "label": "🌐 lp networksync",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp networksync"
+      }
+    },
+    {
+      "label": "🔊 verbose açık",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp verbose on"
+      }
+    },
+    {
+      "label": "🔇 verbose kapalı",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp verbose off"
+      }
+    },
+    {
+      "label": "🌲 lp tree",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp tree"
+      }
+    },
+    {
+      "label": "💾 lp bulkupdate",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp bulkupdate"
+      }
+    },
+    {
+      "label": "🔍 lp search →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "🔍 LP Search",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "term",
+              "label": "🔑 İzin / Arama Terimi",
+              "max_length": 64,
+              "initial": "luckperms"
+            }
+          ],
+          "actions": [
+            {
+              "label": "🔍 Ara",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp search $(term)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page2"
+      }
+    },
+    {
+      "label": "◀ AP Menüsü",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page7"
+      }
+    }
+  ]
+}

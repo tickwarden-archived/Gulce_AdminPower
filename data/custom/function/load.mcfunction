@@ -1,5 +1,5 @@
 # ╔═══════════════════════════════════════════════╗
-# ║  AdminPower v1.3.6 — LOAD                    ║
+# ║  AdminPower v1.3.7 — LOAD                    ║
 # ║  Countdown CD Sistemi                         ║
 # ╚═══════════════════════════════════════════════╝
 
@@ -120,3 +120,6 @@ function custom:load/post_objectives
 # Durum bayrakları
 # #time_frozen ve #mob_spawn (state fake players) sadece ilk kurulumda (version_first_install) init edilir
 # load'da sıfırlanmaz — toggle durumu reload'dan sonra korunur
+# ── v1.3.7 Notlar ─────────────────────────────────────────
+# #pvp_on ve #kinv_on flag'leri version_first_install'da init edilir.
+# CD hedefi yok — toggle işlemleri CD'siz.

@@ -1,0 +1,122 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "LuckPerms — Araçlar [7/7]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "🔍 İzin Kontrol →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp checkpermission",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "perm",
+              "label": "🔑 İzin",
+              "max_length": 64,
+              "initial": "command.*"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Çalıştır",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp checkpermission $(player) $(perm)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page7"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "📜 Log (Son işlemler)",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp log recent"
+      }
+    },
+    {
+      "label": "👤 Oyuncu Logu →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp log user",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Çalıştır",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp log user $(player)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page7"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🔄 Config Yeniden Yükle",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/lp reloadconfig"
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page6"
+      }
+    },
+    {
+      "label": "◀ AP Menüsü",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page7"
+      }
+    }
+  ]
+}

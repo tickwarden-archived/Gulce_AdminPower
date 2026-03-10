@@ -1,5 +1,5 @@
 # ╔═══════════════════════════════════════════════╗
-# ║  AdminPower v1.3.6 — TICK               ║
+# ║  AdminPower v1.3.7 — TICK               ║
 # ║  Countdown CD: her tick 1 azaltır            ║
 # ╚═══════════════════════════════════════════════╝
 
@@ -81,7 +81,7 @@ scoreboard players set @a[scores={ap_creative=1..}] ap_creative 0
 execute as @a[scores={ap_main_menu=1..}] at @s run function custom:menu
 scoreboard players set @a[scores={ap_main_menu=1..}] ap_main_menu 0
 
-execute as @a[scores={ap_multiCmd=1..}] at @s run function custom:macros/run_cmd with entity @s SelectedItem.components."minecraft:custom_data"
+execute as @a[scores={ap_multiCmd=1..}] at @s run function custom:macros/run_cmd with entity @s selected_item.components."minecraft:custom_data"
 scoreboard players set @a[scores={ap_multiCmd=1..}] ap_multiCmd 0
 
 # ── v1.3.3 Trigger Aksiyonları (ap_perm >= 2) ───────────────
@@ -110,8 +110,8 @@ execute as @a[scores={ap_give_netherite=1..}] at @s run function custom:give_net
 scoreboard players set @a[scores={ap_give_netherite=1..}] ap_give_netherite 0
 
 # ap_macro_self — SelectedItem.components makro dispatcher (AME $ makro bağlantısı)
-execute as @a[scores={ap_macro_self=1..}] at @s if data entity @s SelectedItem.components."minecraft:custom_data".ap_action run function custom:macros/self_action with entity @s SelectedItem.components."minecraft:custom_data"
-execute as @a[scores={ap_macro_self=1..}] at @s unless data entity @s SelectedItem.components."minecraft:custom_data".ap_action run tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"❌ Eldeki esyada ap_action verisi yok!","color":"red"},{"text":" /give @s carrot_on_a_stick[minecraft:custom_data={ap_action:'give_armor'}]","color":"yellow","italic":true}]
+execute as @a[scores={ap_macro_self=1..}] at @s if data entity @s selected_item.components."minecraft:custom_data".ap_action run function custom:macros/self_action with entity @s selected_item.components."minecraft:custom_data"
+execute as @a[scores={ap_macro_self=1..}] at @s unless data entity @s selected_item.components."minecraft:custom_data".ap_action run tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"❌ Eldeki esyada ap_action verisi yok!","color":"red"},{"text":" /give @s carrot_on_a_stick[minecraft:custom_data={ap_action:'give_armor'}]","color":"yellow","italic":true}]
 scoreboard players set @a[scores={ap_macro_self=1..}] ap_macro_self 0
 
 

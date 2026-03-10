@@ -151,6 +151,85 @@
       }
     },
     {
+      "label": "🎁 Herkese Eşya Ver →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "🎁 Herkese Eşya Ver",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "item",
+              "label": "📦 Eşya ID (ör: minecraft:diamond)",
+              "max_length": 64,
+              "initial": "minecraft:diamond"
+            },
+            {
+              "type": "minecraft:single_option",
+              "key": "count",
+              "label": "🔢 Miktar",
+              "options": [
+                {
+                  "id": "1",
+                  "display": {
+                    "text": "1"
+                  },
+                  "initial": false
+                },
+                {
+                  "id": "8",
+                  "display": {
+                    "text": "8"
+                  },
+                  "initial": false
+                },
+                {
+                  "id": "16",
+                  "display": {
+                    "text": "16"
+                  },
+                  "initial": true
+                },
+                {
+                  "id": "32",
+                  "display": {
+                    "text": "32"
+                  },
+                  "initial": false
+                },
+                {
+                  "id": "64",
+                  "display": {
+                    "text": "64"
+                  },
+                  "initial": false
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Herkese Ver",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/function custom:macros/player/give_all_item {item:\"$(item)\",count:$(count)}"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:menu/page14"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
       "label": "◀ Önceki",
       "action": {
         "type": "minecraft:show_dialog",

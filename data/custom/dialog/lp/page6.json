@@ -1,0 +1,291 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "LuckPerms — Parent [6/7]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "➕ Kullanıcıya Parent Ekle →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "user parent add",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) parent add $(group)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page6"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "➖ Kullanıcıdan Parent Kaldır →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "user parent remove",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) parent remove $(group)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page6"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🔄 Kullanıcı Parent Ayarla →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "user parent set",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) parent set $(group)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page6"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🗑 Kullanıcı Parent Temizle →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "user parent clear",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) parent clear"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page6"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "➕ Gruba Parent Ekle →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "group parent add",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "parent",
+              "label": "🏷 Üst Grup",
+              "max_length": 64,
+              "initial": "default"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp group $(group) parent add $(parent)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page6"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "➖ Gruptan Parent Kaldır →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "group parent remove",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "group",
+              "label": "🏷 Grup",
+              "max_length": 64,
+              "initial": "vip"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "parent",
+              "label": "🏷 Üst Grup",
+              "max_length": 64,
+              "initial": "default"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp group $(group) parent remove $(parent)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page6"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page5"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page7"
+      }
+    },
+    {
+      "label": "◀ AP Menüsü",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page7"
+      }
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "LuckPerms — Meta [5/7]",
+    "color": "gold",
+    "bold": true,
+    "italic": false
+  },
+  "can_close_with_escape": true,
+  "pause": false,
+  "actions": [
+    {
+      "label": "ℹ Meta Bilgisi →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp user meta info",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) meta info"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page5"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🔠 Prefix Ayarla →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp user meta setprefix",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "prio",
+              "label": "📊 Öncelik",
+              "max_length": 64,
+              "initial": "100"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "prefix",
+              "label": "🔠 Prefix",
+              "max_length": 32,
+              "initial": "[KING]"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) meta setprefix $(prio) $(prefix)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page5"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "🔡 Suffix Ayarla →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp user meta setsuffix",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "prio",
+              "label": "📊 Öncelik",
+              "max_length": 64,
+              "initial": "100"
+            },
+            {
+              "type": "minecraft:text",
+              "key": "suffix",
+              "label": "🔡 Suffix",
+              "max_length": 32,
+              "initial": "♛"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) meta setsuffix $(prio) $(suffix)"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page5"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "❌ Prefix Kaldır →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp user meta unsetprefix",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) meta unsetprefix"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page5"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "❌ Suffix Kaldır →",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": {
+          "type": "minecraft:multi_action",
+          "title": "lp user meta unsetsuffix",
+          "can_close_with_escape": true,
+          "pause": false,
+          "inputs": [
+            {
+              "type": "minecraft:text",
+              "key": "player",
+              "label": "👤 Oyuncu",
+              "max_length": 64,
+              "initial": "@s"
+            }
+          ],
+          "actions": [
+            {
+              "label": "✅ Uygula",
+              "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/lp user $(player) meta unsetsuffix"
+              }
+            },
+            {
+              "label": "◀ Geri",
+              "action": {
+                "type": "minecraft:show_dialog",
+                "dialog": "custom:lp/page5"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "◀ Önceki",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page4"
+      }
+    },
+    {
+      "label": "Sonraki ▶",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:lp/page6"
+      }
+    },
+    {
+      "label": "◀ AP Menüsü",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "custom:menu/page7"
+      }
+    }
+  ]
+}
