@@ -1,1 +1,2 @@
-function custom:lp/page1
+# LP Menüsü — dialog
+dialog show @s custom:lp/page1

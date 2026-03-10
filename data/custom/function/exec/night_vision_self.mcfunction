@@ -8,7 +8,7 @@ execute if entity @s[tag=ap.nv_self] run return run function custom:exec/night_v
 
 # Aç
 tag @s add ap.nv_self
-effect give @s minecraft:night_vision 999999 0 true
+effect give @s minecraft:night_vision infinite 0 true
 playsound minecraft:block.beacon.activate master @s ~ ~ ~ 0.5 2
 title @s times 5 25 10
 title @s title {"text":"👁 GECE GÖRÜŞÜ","color":"aqua","bold":true}

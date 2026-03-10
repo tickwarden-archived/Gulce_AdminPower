@@ -10,7 +10,7 @@ execute if entity @s[tag=ap.vanished] run scoreboard players set #vn_state ap_tm
 
 # Aç — görünmez yap
 execute if score #vn_state ap_tmp matches 0 run tag @s add ap.vanished
-execute if score #vn_state ap_tmp matches 0 run effect give @s minecraft:invisibility 999999 0 true
+execute if score #vn_state ap_tmp matches 0 run effect give @s minecraft:invisibility infinite 0 true
 execute if score #vn_state ap_tmp matches 0 run playsound minecraft:entity.enderman.teleport master @s ~ ~ ~ 0.7 1.2
 execute if score #vn_state ap_tmp matches 0 run title @s actionbar {"text":"👻 VANISH AKTİF","color":"aqua","bold":true}
 execute if score #vn_state ap_tmp matches 0 run tellraw @s ["",{"text":"[AdminPower] ","color":"gold"},{"text":"👻 Vanish ","color":"aqua","bold":true},{"text":"AKTİF — diğer oyuncular seni göremez.","color":"gray"}]

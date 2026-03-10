@@ -1,11 +1,3 @@
-# ╔══════════════════════════════════════════════════════════╗
-# ║  AdminPower × AME — TAM KALDIRMA (UNINSTALL)           ║
-# ║  /function custom:uninstall/run                         ║
-# ╚══════════════════════════════════════════════════════════╝
-# UYARI: Bu işlem GERİ ALINAMAZ. Tüm AP verisi silinir.
-# Onay için: /function custom:uninstall/confirm
-
-tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"⚠ UNINSTALL","color":"red","bold":true},{"text":" — Tüm veri silinecek!","color":"yellow"}]
-tellraw @s [{"text":"  Silecekler: Scoreboard'lar, storage, tag'ler, AME config/cooldowns","color":"gray"}]
-tellraw @s [{"text":"  Onaylamak için: ","color":"gray"},{"text":"[UNINSTALL ONAYLA]","color":"red","bold":true,click_event:{"action":"run_command","command":"/function custom:uninstall/confirm"},hover_event:{"action":"show_text","value":"Bu işlem geri alınamaz!"}}]
-tellraw @s [{"text":"  İptal: Bu mesajı görmezden gel","color":"dark_gray","italic":true}]
+# uninstall/run — Uninstall onay dialog'unu aç
+execute unless score @s ap_perm matches 4 run return run tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"❌ Uninstall için owner yetkisi gerekli.","color":"red"}]
+dialog show @s custom:uninstall/menu

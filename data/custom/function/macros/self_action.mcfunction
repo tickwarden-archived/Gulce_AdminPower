@@ -27,7 +27,7 @@ execute unless score @s ap_perm matches 2.. run return run tellraw @s [{"text":"
 
 # multi_cmd: NAME + commands parametreleri gerektirdiği için 'with' ile özel dispatch
 # (Minecraft'ta 'function X with Y' sadece macro fonksiyonlarda çalışır)
-execute if data entity @s SelectedItem.components."minecraft:custom_data"{ap_action:"multi_cmd"} run return run function custom:exec/multi_cmd with entity @s SelectedItem.components."minecraft:custom_data"
+execute if data entity @s selected_item.components."minecraft:custom_data"{ap_action:"multi_cmd"} run return run function custom:exec/multi_cmd with entity @s selected_item.components."minecraft:custom_data"
 
 # Diğer tüm exec'ler için generic dispatch (parametre gerektirmez)
 $function custom:exec/$(ap_action)

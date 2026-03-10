@@ -1,4 +1,5 @@
-# HATA DÜZELTİLDİ: ap_multiCmd trigger eksikti — Komut Değneği çalışmıyordu.
+# Op tag'li oyuncular için trigger'ları etkinleştir
+# tick.mcfunction'dan çağırılır
 scoreboard players enable @a[tag=op] ap_give_tools
 scoreboard players enable @a[tag=op] ap_clear_weather
 scoreboard players enable @a[tag=op] ap_main_menu
