@@ -1,2 +1,2 @@
-# HF-008: Cooldown doldu — action bar'ı temizle
+# CD ready — actionbar temizle
 title @s actionbar {"text":""}

@@ -277,3 +277,9 @@ function custom:ame/config/set_default_int with storage macro:input {}
 data modify storage macro:input key set value "ap_cd_warn"
 data modify storage macro:input value set value 200
 function custom:ame/config/set_default_int with storage macro:input {}
+
+# ── v1.3.7 Event'leri ─────────────────────────────────────
+data modify storage macro:input event set value "ap_pvp_toggled"
+function macro:event/unregister with storage macro:input {}
+data modify storage macro:input event set value "ap_kinv_toggled"
+function macro:event/unregister with storage macro:input {}

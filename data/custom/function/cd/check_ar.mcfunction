@@ -1,2 +1,2 @@
-execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_ar
-execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_ar
+# CD router: AME epoch veya scoreboard — custom:cd/check_ar
+function custom:cd/check_ar

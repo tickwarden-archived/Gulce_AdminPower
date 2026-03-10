@@ -1,4 +1,2 @@
-# ============================================
-# custom:ame/menu_page — AME Araçları (Dialog)
-# ============================================
+# AME Araçları menüsü — dialog
 dialog show @s custom:ame/menu
