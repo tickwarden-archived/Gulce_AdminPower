@@ -19,4 +19,4 @@ execute if score $ame ap_flags matches 1 run tellraw @s [{"text":"╚═══�
 
 # AME pasif branch
 execute if score $ame ap_flags matches 0 run tellraw @s [{"text":"[AME] ","color":"aqua"},{"text":"⚠ AME bulunamadı. ","color":"yellow"},{"text":"Native scoreboard CD sistemi aktif.","color":"gray"}]
-execute if score $ame ap_flags matches 0 run tellraw @s [{"text":"→ Kurmak için: ","color":"gray"},{"text":"https://github.com/tickwarden/macroEngine-dp","color":"blue","underlined":true,"click_event":{"action":"open_url","url":"https://github.com/tickwarden/macroEngine-dp"}}]
+execute if score $ame ap_flags matches 0 run tellraw @s [{"text":"→ Kurmak için: ","color":"gray"},{"text":"https://github.com/toolkitmc/macroEngine-dp","color":"blue","underlined":true,"click_event":{"action":"open_url","url":"https://github.com/toolkitmc/macroEngine-dp"}}]

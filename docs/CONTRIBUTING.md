@@ -5,7 +5,7 @@ AdminPower'a katkıda bulunmak istediğin için teşekkürler!
 ## Nasıl Katkıda Bulunabilirim?
 
 ### 🐛 Bug Bildirme
-1. Önce mevcut [Issues](https://github.com/tickwarden/Gulce_AdminPower/issues)'ları kontrol et
+1. Önce mevcut [Issues](https://github.com/toolkitmc/Gulce_AdminPower/issues)'ları kontrol et
 2. Yeni bir issue aç ve şunları belirt:
    - Minecraft sürümü
    - Hatanın nasıl oluştuğu

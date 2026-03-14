@@ -10,12 +10,12 @@ Minecraft Java Edition için admin yönetim datapack'i.
 
 ## 📦 Bağımlılıklar
 Bu datapack çalışmak için **macroEngine-dp**'ye ihtiyaç duyar.
-- 🔗 [macroEngine-dp](https://github.com/tickwarden/macroEngine-dp)
+- 🔗 [macroEngine-dp](https://github.com/toolkitmc/macroEngine-dp)
 
 > ⚠️ macroEngine-dp kurulu olmadan AdminPower düzgün çalışmaz!
 
 ## 🚀 Kurulum
-1. Önce [macroEngine-dp](https://github.com/tickwarden/macroEngine-dp)'yi indir ve kur
+1. Önce [macroEngine-dp](https://github.com/toolkitmc/macroEngine-dp)'yi indir ve kur
 2. `Gulce_AdminPower.zip` dosyasını çıkartmadan `dünya/datapacks/` klasörüne koy
 3. Oyunda `/reload` çalıştır
 4. `/function custom:perm/set_owner` çalıştır
