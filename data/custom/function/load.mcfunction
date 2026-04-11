@@ -116,6 +116,7 @@ data modify storage custom:meta ap_objectives_done set value 1b
 
 # Reload'dan sonraki her çalışmada buraya atlanır
 function custom:load/post_objectives
+function gap_load:set_meta
 
 # Durum bayrakları
 # #time_frozen ve #mob_spawn (state fake players) sadece ilk kurulumda (version_first_install) init edilir
