@@ -31,7 +31,7 @@ jobs:
             -x ".gitignore"
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2.6.1   # ← Fixed here
+        uses: softprops/action-gh-release@v2
         with:
           name: "Gulce_AdminPower v${{ steps.version.outputs.version }}"
           tag_name: ${{ github.ref_name }}
@@ -41,12 +41,11 @@ jobs:
             Vanilla AdminPower datapack for Minecraft Java Edition 1.21.6+.
 
             ### Installation
-            1. Download the ZIP file below.
-            2. Put it in your world's `datapacks/` folder.
-            3. Run `/reload` or restart the world.
+            1. Download the ZIP below
+            2. Place it in your world's `datapacks/` folder
+            3. Run `/reload`
 
-            ### Documentation
-            See `README.md` inside the datapack for API reference and usage.
+            See `README.md` for full documentation.
           files: "Gulce_AdminPower_v${{ steps.version.outputs.version }}.zip"
           draft: false
           prerelease: ${{ contains(github.ref_name, '-') }}
