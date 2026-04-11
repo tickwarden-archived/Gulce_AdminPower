@@ -9,6 +9,8 @@
 execute if data storage custom:meta {ap_objectives_done:1b} run function custom:load/post_objectives
 execute if data storage custom:meta {ap_objectives_done:1b} run return 0
 
+function gap_load:set_meta
+
 # ── Trigger Objectives ──────────────────────────
 scoreboard objectives add ap_clear_weather trigger
 scoreboard objectives add ap_feed_self trigger
@@ -116,7 +118,6 @@ data modify storage custom:meta ap_objectives_done set value 1b
 
 # Reload'dan sonraki her çalışmada buraya atlanır
 function custom:load/post_objectives
-function gap_load:set_meta
 
 # Durum bayrakları
 # #time_frozen ve #mob_spawn (state fake players) sadece ilk kurulumda (version_first_install) init edilir
@@ -125,4 +126,4 @@ function gap_load:set_meta
 # #pvp_on ve #kinv_on flag'leri version_first_install'da init edilir.
 # CD hedefi yok — toggle işlemleri CD'siz.
 
-function gap_load:info with storage :
+function gap_load:info with storage gap:meta
