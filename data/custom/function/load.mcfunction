@@ -124,3 +124,5 @@ function gap_load:set_meta
 # ── v1.3.7 Notlar ─────────────────────────────────────────
 # #pvp_on ve #kinv_on flag'leri version_first_install'da init edilir.
 # CD hedefi yok — toggle işlemleri CD'siz.
+
+function gap_load:info with storage :
