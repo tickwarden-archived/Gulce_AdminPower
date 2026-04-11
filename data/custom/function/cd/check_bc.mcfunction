@@ -1,3 +1,2 @@
-# AME yolu (epoch-bazlı, reload-safe)
-execute if score $ame ap_flags matches 1 run function custom:ame/cd/check_bc
-execute if score $ame ap_flags matches 0 run return run function custom:cd/scoreboard_check_bc
+# CD Check — AME v3 (v1.4.0: scoreboard fallback kaldırıldı)
+function custom:ame/cd/check_bc

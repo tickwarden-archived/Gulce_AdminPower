@@ -1,20 +1,14 @@
-# ╔═══════════════════════════════════════════════╗
-# ║  AdminPower v1.3.7 — TICK               ║
-# ║  Countdown CD: her tick 1 azaltır            ║
-# ╚═══════════════════════════════════════════════╝
+# ╔═══════════════════════════════════════════════════════╗
+# ║  AdminPower v1.4.0 — TICK                           ║
+# ║  v1.4.0 değişiklikleri:                             ║
+# ║  - scoreboard_cd kaldırıldı (AME epoch CD)          ║
+# ║  - wand dispatch kaldırıldı (AME macro.rightClick)  ║
+# ╚═══════════════════════════════════════════════════════╝
 
-# ── CD sayaçlarını geri say (0'ın altına düşme) ─
-# ── CD Sayaçları (AME yokken scoreboard, AME varken epoch-bazlı) ─
-execute if score $ame ap_flags matches 0 run function custom:tick/scoreboard_cd
-
-# ── Dondurulmuş oyuncuları yerinde tut ──────────
+# ── Dondurulmuş oyuncuları yerinde tut ──────────────────
 execute as @a[tag=ap.freezed,gamemode=!spectator] at @s run tp @s @s
 
-# ── Item sağ tık dispatch ────────────────────────
-execute as @a[scores={ap_clickedItem=1..}] at @s run function custom:items/dispatch
-scoreboard players set @a ap_clickedItem 0
-
-# ── Trigger enable (sadece op tag'li oyuncular) ─
+# ── Trigger enable (sadece op tag'li oyuncular) ─────────
 scoreboard players enable @a[tag=op] ap_give_tools
 scoreboard players enable @a[tag=op] ap_clear_weather
 scoreboard players enable @a[tag=op] ap_main_menu
@@ -27,7 +21,7 @@ scoreboard players enable @a[tag=op] ap_speed_boost
 scoreboard players enable @a[tag=op] ap_creative
 scoreboard players enable @a[tag=op] ap_multiCmd
 
-# ── Trigger enable (ap_perm >= 2 / mod+) — v1.3.3 ──────────
+# ── Trigger enable (ap_perm >= 2 / mod+) ────────────────
 scoreboard players enable @a[scores={ap_perm=2..}] ap_give_armor
 scoreboard players enable @a[scores={ap_perm=2..}] ap_freeze_self
 scoreboard players enable @a[scores={ap_perm=2..}] ap_tp_spawn
@@ -37,20 +31,17 @@ scoreboard players enable @a[scores={ap_perm=2..}] ap_fire_resist
 scoreboard players enable @a[scores={ap_perm=2..}] ap_give_diamond
 scoreboard players enable @a[scores={ap_perm=2..}] ap_give_netherite
 scoreboard players enable @a[scores={ap_perm=2..}] ap_macro_self
-# ── v1.3.4 Trigger enable (ap_perm >= 2) ────────────────────
 scoreboard players enable @a[scores={ap_perm=2..}] ap_kill_mobs
 scoreboard players enable @a[scores={ap_perm=2..}] ap_night_vision
 scoreboard players enable @a[scores={ap_perm=2..}] ap_arrow_self
 scoreboard players enable @a[scores={ap_perm=2..}] ap_smite_trigger
 scoreboard players enable @a[scores={ap_perm=2..}] ap_starter_self
 scoreboard players enable @a[scores={ap_perm=2..}] ap_flag_list
-# reload: ap_perm >= 3 (kontrol exec içinde)
-scoreboard players enable @a[scores={ap_perm=3..}] ap_reload
-
-# ── v1.3.6 Trigger enable ───────────────────────────────────
 scoreboard players enable @a[scores={ap_perm=2..}] ap_vanish
 scoreboard players enable @a[scores={ap_perm=2..}] ap_random_tp
-# ── Trigger aksiyonları ─────────────────────────
+scoreboard players enable @a[scores={ap_perm=3..}] ap_reload
+
+# ── Trigger Dispatch ─────────────────────────────────────
 execute as @a[scores={ap_clear_weather=1..}] at @s run function custom:weather_clear
 scoreboard players set @a[scores={ap_clear_weather=1..}] ap_clear_weather 0
 
@@ -84,7 +75,7 @@ scoreboard players set @a[scores={ap_main_menu=1..}] ap_main_menu 0
 execute as @a[scores={ap_multiCmd=1..}] at @s run function custom:macros/run_cmd with entity @s selected_item.components."minecraft:custom_data"
 scoreboard players set @a[scores={ap_multiCmd=1..}] ap_multiCmd 0
 
-# ── v1.3.3 Trigger Aksiyonları (ap_perm >= 2) ───────────────
+# ── v1.3.3 Trigger Dispatch ──────────────────────────────
 execute as @a[scores={ap_give_armor=1..}] at @s run function custom:give_armor_self
 scoreboard players set @a[scores={ap_give_armor=1..}] ap_give_armor 0
 
@@ -109,13 +100,11 @@ scoreboard players set @a[scores={ap_give_diamond=1..}] ap_give_diamond 0
 execute as @a[scores={ap_give_netherite=1..}] at @s run function custom:give_netherite_self
 scoreboard players set @a[scores={ap_give_netherite=1..}] ap_give_netherite 0
 
-# ap_macro_self — SelectedItem.components makro dispatcher (AME $ makro bağlantısı)
 execute as @a[scores={ap_macro_self=1..}] at @s if data entity @s selected_item.components."minecraft:custom_data".ap_action run function custom:macros/self_action with entity @s selected_item.components."minecraft:custom_data"
-execute as @a[scores={ap_macro_self=1..}] at @s unless data entity @s selected_item.components."minecraft:custom_data".ap_action run tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"❌ Eldeki esyada ap_action verisi yok!","color":"red"},{"text":" /give @s carrot_on_a_stick[minecraft:custom_data={ap_action:'give_armor'}]","color":"yellow","italic":true}]
+execute as @a[scores={ap_macro_self=1..}] at @s unless data entity @s selected_item.components."minecraft:custom_data".ap_action run tellraw @s [{"text":"[AdminPower] ","color":"gold"},{"text":"❌ Eldeki eşyada ap_action verisi yok!","color":"red"}]
 scoreboard players set @a[scores={ap_macro_self=1..}] ap_macro_self 0
 
-
-# ── v1.3.4 Trigger Dispatch ─────────────────────────────────
+# ── v1.3.4 Trigger Dispatch ──────────────────────────────
 execute as @a[scores={ap_kill_mobs=1..}] at @s run function custom:kill_mobs_trigger
 scoreboard players set @a[scores={ap_kill_mobs=1..}] ap_kill_mobs 0
 
@@ -137,11 +126,7 @@ scoreboard players set @a[scores={ap_reload=1..}] ap_reload 0
 execute as @a[scores={ap_flag_list=1..}] at @s run function custom:flag_list_trigger_wrapper
 scoreboard players set @a[scores={ap_flag_list=1..}] ap_flag_list 0
 
-# ── Yeni CD sayaçları (v1.1.0) ───────────────────
-
-# ── Yeni CD sayaçları (v1.2.0) ───────────────────
-
-# ── v1.3.6 Trigger Dispatch ──────────────────────────────────
+# ── v1.3.6 Trigger Dispatch ──────────────────────────────
 execute as @a[scores={ap_vanish=1..}] at @s run function custom:exec/vanish_toggle
 scoreboard players set @a[scores={ap_vanish=1..}] ap_vanish 0
 

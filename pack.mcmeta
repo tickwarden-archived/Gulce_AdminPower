@@ -1,12 +1,12 @@
 {
   "pack": {
     "pack_format": 94,
-    "description": "AdminPower v1.3.7 | Dialog UI\n1.21.11 Uyumlu | /function custom:menu 👑",
+    "description": "AdminPower v1.4.0 | AME v3 Required\n1.21.11 Uyumlu | /function custom:menu 👑",
     "supported_formats": [
       80,
-      94
+      101
     ],
     "min_format": 80,
-    "max_format": 94
+    "max_format": 101
   }
 }

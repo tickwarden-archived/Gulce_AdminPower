@@ -111,3 +111,12 @@ data remove storage custom:meta ap_objectives_done
 data remove storage custom:meta mc_compat
 
 tellraw @s [{"text":"  ✓ AME storage temizlendi","color":"dark_green"}]
+
+# v1.4.0: AME cooldown'larını temizle
+data remove storage macro:engine cooldowns
+
+# v1.4.0: Wand bind'larını temizle
+data remove storage macro:engine wand_binds
+
+# v1.4.0: Hook bind'larını temizle
+data remove storage macro:engine hook_binds
