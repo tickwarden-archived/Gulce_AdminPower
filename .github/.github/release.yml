@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build & Publish GitHub Release
+    runs-on: ubuntu-latest
+    # Gereksiz env değişkenleri kaldırıldı
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Extract version from tag
+        id: version
+        run: echo "version=${GITHUB_REF_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Build ZIP
+        run: |
+          zip -r "Gulce_AdminPower_v${{ steps.version.outputs.version }}.zip" . \
+            --exclude "*.git*" \
+            --exclude ".github/*" \
+            --exclude "*.md" \
+            --exclude "LICENSE"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          name: "Gulce_AdminPower_v${{ steps.version.outputs.version }}"
+          tag_name: ${{ github.ref_name }}
+          body: |
+            ## ClickLib ${{ steps.version.outputs.version }}
+            Vanilla AdminPower datapack for Minecraft Java Edition 1.21.6+.
+            ### Installation
+            Download the ZIP below and place it in your world's `datapacks/` folder.
+            ### Changelog
+            See [README.md](README.md) for API reference.
+          files: "Gulce_AdminPower_v${{ steps.version.outputs.version }}.zip"
+          draft: false
+          prerelease: ${{ contains(steps.version.outputs.version, '-') }}

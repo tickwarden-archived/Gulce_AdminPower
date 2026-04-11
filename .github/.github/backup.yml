@@ -1,0 +1,43 @@
+name: Backup
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  backup:
+    name: Build & Upload ZIP Artifact
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Get short SHA
+        id: sha
+        run: echo "short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Build ZIP
+        run: |
+          zip -r "click-lib-${{ steps.sha.outputs.short }}.zip" . \
+            --exclude "*.git*" \
+            --exclude ".github/*" \
+            --exclude "*.md" \
+            --exclude "LICENSE"
+
+      - name: Build git bundle
+        run: git bundle create "Gulce_AdminPower_${{ steps.sha.outputs.short }}.bundle" --all
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: "click-lib-${{ steps.sha.outputs.short }}"
+          path: |
+            click-lib-${{ steps.sha.outputs.short }}.zip
+            click-lib-${{ steps.sha.outputs.short }}.bundle
+          retention-days: 30
