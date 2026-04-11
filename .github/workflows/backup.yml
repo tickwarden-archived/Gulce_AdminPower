@@ -36,8 +36,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v6
         with:
-          name: "click-lib-${{ steps.sha.outputs.short }}"
+          name: "GAP-${{ steps.sha.outputs.short }}"
           path: |
-            click-lib-${{ steps.sha.outputs.short }}.zip
-            click-lib-${{ steps.sha.outputs.short }}.bundle
+            GAP-${{ steps.sha.outputs.short }}.zip
+            GAP-${{ steps.sha.outputs.short }}.bundle
           retention-days: 30
